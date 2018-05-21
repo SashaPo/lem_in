@@ -40,8 +40,16 @@ SRCS_LIB = ft_memcmp.c 		ft_strlcat.c		ft_atoi.c \
 		ft_itoa_base.c 		ft_itoa_base_2.c    ft_itoa_long.c \
 		ft_itoa_base_long_2.c ft_itoa_ulong.c
 
+SRCS_PRINTF = src/ft_printf.c src/ft_init.c src/ft_unicode.c src/ft_handle_c.c \
+		src/ft_flag_parser.c src/ft_specifiers.c src/ft_bool.c \
+		src/ft_length_parser.c src/ft_handle_di.c src/ft_handle_x.c src/ft_handle_o.c \
+		src/ft_handle_u.c src/ft_handle_b_for_binary.c src/ft_handle_p_for_pointer.c \
+		src/ft_handle_percent_and_unknown.c src/ft_additional_functions.c src/ft_additional_functions1.c \
+		src/ft_handle_str.c src/ft_additional_functions2.c src/ft_additional_functions3.c \
+		src/ft_additional_functions4.c
+
 DIR_SRCS_LIB = $(addprefix libft/, ${SRCS_LIB})
-BINS = $(SRCS:.c=.o)
+BINS = $(SRCS:.c=.o) $(SRCS_PRINTF:.c=.o)
 BINS_LIB = $(DIR_SRCS_LIB:.c=.o)
 
 all : $(NAME)

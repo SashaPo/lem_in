@@ -20,7 +20,7 @@
 
 typedef struct		s_rooms
 {
-	int				name;
+	char			*name;
 	unsigned int	ant;
 	int				x;
 	int				y;
@@ -29,14 +29,15 @@ typedef struct		s_rooms
 
 typedef struct		s_links
 {
-	char			*name1;
-	char			*name2;
+	int				name1;
+	int				name2;
 	struct 	s_links	*next;
 }					t_links;
 
 typedef struct		s_lemin
 {
 	unsigned int	ants;
+	int				comment;
 	char			*start;
 	char			*end;
 	char			*line;
@@ -48,7 +49,10 @@ t_lemin				ft_init_structure(t_lemin *l);
 void				get_ants(t_lemin *l);
 void				get_rooms(t_lemin *l);
 void				get_links(t_lemin *l);
+void				get_comments(t_lemin *l);
 int					validation(t_lemin *l);
 char				*find_path(t_lemin *l);
+void				ft_create_links(t_links **links);
+void				ft_create_rooms(t_rooms **rooms);
 
 #endif
