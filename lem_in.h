@@ -54,5 +54,6 @@ int					validation(t_lemin *l);
 char				*find_path(t_lemin *l);
 void				ft_create_links(t_links **links);
 void				ft_create_rooms(t_rooms **rooms);
+void				find_start_or_end(t_lemin *l);
 
 #endif

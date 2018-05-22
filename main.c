@@ -27,13 +27,16 @@ int		main(void)
 	if (!(get_next_line(0, &l->line)))
 		this_is_error();
 	get_ants(l);
+	ft_printf("%d\n", l->ants);
 	while (l->line && get_next_line(0, &l->line) > 0)
 	{
-		ft_printf("line: %s\n", l->line);
 		if (ft_strlen(l->line) == 0)
 			exit(1);
 		if (l->line[1] == '-')
 			get_links(l);
+		if (l->line[0] == '#' && l->line[1] != '#')
+			ft_printf("%s\n", l->line);
+		//get_comments(l);
 		else
 			get_rooms(l);
 	}
@@ -55,6 +58,15 @@ t_lemin	ft_init_structure(t_lemin *l)
 
 void	get_ants(t_lemin *l)
 {
+	int i;
+
+	i = 0;
+	while (l->line[i] != '\0')
+	{
+		if (l->line[i] < 48 || l->line[i] > 57)
+			this_is_error();
+		i++;
+	}
 	l->ants = ft_atoi(l->line);
 }
 
@@ -63,7 +75,7 @@ void	ft_create_rooms(t_rooms **rooms)
 	t_rooms *new;
 
 	new = malloc(sizeof(t_rooms));
-	new->name = (char *)malloc(sizeof(char));
+	new->name = NULL;
 	new->next = *rooms;
 	*rooms = new;
 }
@@ -73,12 +85,30 @@ void	find_start_or_end(t_lemin *l)
 	if (ft_strcmp(l->line, "##start") == 0)
 	{
 		get_next_line(0, &l->line);
-		l->start = l->line;
+		if (ft_strlen(l->start) != 0)
+			this_is_error();
+		if (ft_strcmp(l->line, "##start") == 0)
+		{
+			get_next_line(0, &l->line);
+			l->start = l->line;
+		}
+		else
+			l->start = l->line;
+		ft_printf("start: %s\n", l->start);
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
 	{
 		get_next_line(0, &l->line);
-		l->end = l->line;
+		if (ft_strlen(l->end) != 0)
+			this_is_error();
+		if (ft_strcmp(l->line, "##end") == 0)
+		{
+			get_next_line(0, &l->line);
+			l->end = l->line;
+		}
+		else
+			l->end = l->line;
+		ft_printf("end: %s\n", l->end);
 	}
 }
 
@@ -89,20 +119,21 @@ void	get_rooms(t_lemin *l)
 
 	i = 0;
 	j = 0;
-	if (l->line[0] == '#' && l->line[1] == '#')
+	if (ft_strcmp(l->line, "##start") == 0 || ft_strcmp(l->line, "##end") == 0)
 		find_start_or_end(l);
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
-		while (l->line[i] != ' ')
-		{
-			if (l->line[0] == 'L')
-				exit(1);
-			else
-				l->rooms->name[j++] = l->line[i++];
-		}
+		ft_printf("line: %s, i : %d\n", l->line, i);
+		int len = ft_strchr(l->line, ' ') - l->line;
+		l->rooms->name = ft_strnew(len);
+
+		ft_strncpy(l->rooms->name, l->line, len);
+		ft_printf("line + 1: %s\n", l->line + 1);
 		l->rooms->x = ft_atoi(ft_strchr(l->line + 1, ' '));
-		l->rooms->y = ft_atoi(ft_strchr(l->line + 2, ' '));
+		// ft_printf("room x: %d\n", l->rooms->x);
+		l->rooms->y = ft_atoi(ft_strchr(l->line + len + 2, ' '));
+		// ft_printf("room y: %d\n", l->rooms->y);
 	}
 }
 
