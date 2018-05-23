@@ -32,11 +32,12 @@ int		main(void)
 	{
 		if (ft_strlen(l->line) == 0)
 			exit(1);
-		if (l->line[1] == '-')
+		if (ft_strchr(l->line, '-'))
 			get_links(l);
-		if (l->line[0] == '#' && l->line[1] != '#')
+		else if (l->line[0] == '#' && l->line[1] != '#')
 			ft_printf("%s\n", l->line);
-		//get_comments(l);
+		// if (check_spaces(l))
+		// 	this_is_error();
 		else
 			get_rooms(l);
 	}
@@ -67,7 +68,10 @@ void	get_ants(t_lemin *l)
 			this_is_error();
 		i++;
 	}
+	i = 0;
 	l->ants = ft_atoi(l->line);
+	if (l->ants <= 0 || l->ants > 2147483647)
+		this_is_error();
 }
 
 void	ft_create_rooms(t_rooms **rooms)
@@ -87,13 +91,7 @@ void	find_start_or_end(t_lemin *l)
 		get_next_line(0, &l->line);
 		if (ft_strlen(l->start) != 0)
 			this_is_error();
-		if (ft_strcmp(l->line, "##start") == 0)
-		{
-			get_next_line(0, &l->line);
-			l->start = l->line;
-		}
-		else
-			l->start = l->line;
+		l->start = l->line;
 		ft_printf("start: %s\n", l->start);
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
@@ -112,6 +110,24 @@ void	find_start_or_end(t_lemin *l)
 	}
 }
 
+int		check_spaces(t_lemin *l)
+{
+	int		i;
+	int		spaces;
+
+	i = 0;
+	spaces = 0;
+	while(l->line[i])
+	{
+		if (l->line[i] == ' ')
+			spaces++;
+		i++;
+	}
+	if (spaces != 2)
+		return(1);
+	return(0);
+}
+
 void	get_rooms(t_lemin *l)
 {
 	int		i;
@@ -121,19 +137,21 @@ void	get_rooms(t_lemin *l)
 	j = 0;
 	if (ft_strcmp(l->line, "##start") == 0 || ft_strcmp(l->line, "##end") == 0)
 		find_start_or_end(l);
+	if (check_spaces(l))
+		this_is_error();
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
-		ft_printf("line: %s, i : %d\n", l->line, i);
+		// ft_printf("line: %s, i : %d\n", l->line, i);
 		int len = ft_strchr(l->line, ' ') - l->line;
 		l->rooms->name = ft_strnew(len);
 
 		ft_strncpy(l->rooms->name, l->line, len);
-		ft_printf("line + 1: %s\n", l->line + 1);
+		ft_printf("room name: %s\n", l->rooms->name);
 		l->rooms->x = ft_atoi(ft_strchr(l->line + 1, ' '));
-		// ft_printf("room x: %d\n", l->rooms->x);
+		ft_printf("room x: %d\n", l->rooms->x);
 		l->rooms->y = ft_atoi(ft_strchr(l->line + len + 2, ' '));
-		// ft_printf("room y: %d\n", l->rooms->y);
+		ft_printf("room y: %d\n", l->rooms->y);
 	}
 }
 
@@ -142,19 +160,30 @@ void	ft_create_links(t_links **links)
 	t_links *new;
 
 	new = malloc(sizeof(t_links));
+	new->name1 = 0;
+	new->name2 = 0;
 	new->next = *links;
 	*links = new;
 }
 
 void	get_links(t_lemin *l)
 {
-	if (l->line && l->line[1] == '-')
+	int		i;
+
+	i = 0;
+	if (l->line)
 	{
 		ft_create_links(&l->links);
 		l->links->name1 = ft_atoi(l->line);
+		if (l->links->name1 < 0 || l->links->name1 > 2147483647)
+			this_is_error();
 		ft_printf("name1: %d", l->links->name1);
 		ft_printf("-");
-		l->links->name2 = ft_atoi(ft_strchr(l->line + 1, '-'));
+		while (l->line[i] != '-')
+			i++;
+		l->links->name2 = ft_atoi(&l->line[i]);
+		if (l->links->name2 < 0 || l->links->name2 > 2147483647)
+			this_is_error();
 		ft_printf("%d\n", l->links->name2);
 	}
 }
