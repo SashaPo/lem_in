@@ -36,14 +36,31 @@ int		main(void)
 			get_links(l);
 		else if (l->line[0] == '#' && l->line[1] != '#')
 			ft_printf("%s\n", l->line);
-		// if (check_spaces(l))
-		// 	this_is_error();
 		else
 			get_rooms(l);
 	}
-	// if (validation(l))
+	if (validation(l))
+		ft_printf("valid\n");
 		// find_path(l);
 	return (0);
+}
+
+int		validation(t_lemin *l)
+{
+	if (l->rooms->name == NULL)
+	{
+		ft_printf("no rooms!\n");
+		this_is_error();
+		return(0);
+	}
+	if (ft_strlen(l->start) == 0 || ft_strlen(l->end) == 0)
+	{
+		ft_printf("no start or end!\n");
+		this_is_error();
+		return (0);
+	}
+	else
+		return (1);
 }
 
 t_lemin	ft_init_structure(t_lemin *l)
@@ -91,7 +108,8 @@ void	find_start_or_end(t_lemin *l)
 		get_next_line(0, &l->line);
 		if (ft_strlen(l->start) != 0)
 			this_is_error();
-		l->start = l->line;
+		else
+			l->start = l->line;
 		ft_printf("start: %s\n", l->start);
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
@@ -99,11 +117,6 @@ void	find_start_or_end(t_lemin *l)
 		get_next_line(0, &l->line);
 		if (ft_strlen(l->end) != 0)
 			this_is_error();
-		if (ft_strcmp(l->line, "##end") == 0)
-		{
-			get_next_line(0, &l->line);
-			l->end = l->line;
-		}
 		else
 			l->end = l->line;
 		ft_printf("end: %s\n", l->end);
