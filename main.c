@@ -51,16 +51,22 @@ int		validation(t_lemin *l)
 	{
 		ft_printf("no rooms!\n");
 		this_is_error();
-		return(0);
+		return(1);
 	}
-	if (ft_strlen(l->start) == 0 || ft_strlen(l->end) == 0)
+	if (l->start == 0)
 	{
-		ft_printf("no start or end!\n");
+		ft_printf("no start!\n");
 		this_is_error();
-		return (0);
+		return(1);
+	}
+	if (l->end == 0)
+	{
+		ft_printf("no end!\n");
+		this_is_error();
+		return(1);
 	}
 	else
-		return (1);
+		return (0);
 }
 
 t_lemin	ft_init_structure(t_lemin *l)
@@ -109,7 +115,16 @@ void	find_start_or_end(t_lemin *l)
 		if (ft_strlen(l->start) != 0)
 			this_is_error();
 		else
-			l->start = l->line;
+		{
+			ft_printf("line after start: %s\n", l->line);
+			if (ft_strchr(l->line, '#') || ft_strchr(l->line, '-'))
+			{
+				l->start = 0;
+				validation(l);
+			}
+			else
+				l->start = l->line;
+		}
 		ft_printf("start: %s\n", l->start);
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
@@ -118,7 +133,16 @@ void	find_start_or_end(t_lemin *l)
 		if (ft_strlen(l->end) != 0)
 			this_is_error();
 		else
-			l->end = l->line;
+		{
+			ft_printf("line after end: %s\n", l->line);
+			if ((ft_strchr(l->line, '#') || ft_strchr(l->line, '-')))
+			{
+				l->end = 0;
+				validation(l);
+			}
+			else
+				l->end = l->line;
+		}
 		ft_printf("end: %s\n", l->end);
 	}
 }
@@ -141,6 +165,24 @@ int		check_spaces(t_lemin *l)
 	return(0);
 }
 
+int		check_str(t_lemin *l)
+{
+	int		i;
+	int		n;
+
+	i = 0;
+	n = 65;
+	while (n < 122)
+	{
+		if (ft_strchr(l->line + 1, n++))
+		{
+			ft_printf("not a valid line!!!!\n");
+			this_is_error();
+		}
+	}
+	return (0);
+}
+
 void	get_rooms(t_lemin *l)
 {
 	int		i;
@@ -151,7 +193,7 @@ void	get_rooms(t_lemin *l)
 	if (ft_strcmp(l->line, "##start") == 0 || ft_strcmp(l->line, "##end") == 0)
 		find_start_or_end(l);
 	if (check_spaces(l))
-		this_is_error();
+		l->line = NULL;
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
@@ -161,6 +203,7 @@ void	get_rooms(t_lemin *l)
 
 		ft_strncpy(l->rooms->name, l->line, len);
 		ft_printf("room name: %s\n", l->rooms->name);
+		check_str(l);
 		l->rooms->x = ft_atoi(ft_strchr(l->line + 1, ' '));
 		ft_printf("room x: %d\n", l->rooms->x);
 		l->rooms->y = ft_atoi(ft_strchr(l->line + len + 2, ' '));
@@ -189,14 +232,20 @@ void	get_links(t_lemin *l)
 		ft_create_links(&l->links);
 		l->links->name1 = ft_atoi(l->line);
 		if (l->links->name1 < 0 || l->links->name1 > 2147483647)
+		{
+			ft_printf("not integer!!!!\n");
 			this_is_error();
+		}
 		ft_printf("name1: %d", l->links->name1);
 		ft_printf("-");
 		while (l->line[i] != '-')
 			i++;
 		l->links->name2 = ft_atoi(&l->line[i]);
 		if (l->links->name2 < 0 || l->links->name2 > 2147483647)
+		{
+			ft_printf("not integer!!!!\n");
 			this_is_error();
+		}
 		ft_printf("%d\n", l->links->name2);
 	}
 }
