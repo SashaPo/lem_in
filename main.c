@@ -47,6 +47,9 @@ int		main(void)
 
 int		validation(t_lemin *l)
 {
+	int check;
+
+	check = 0;
 	if (l->rooms->name == NULL)
 	{
 		ft_printf("no rooms!\n");
@@ -65,8 +68,7 @@ int		validation(t_lemin *l)
 		this_is_error();
 		return(1);
 	}
-	else
-		return (0);
+	return (0);
 }
 
 t_lemin	ft_init_structure(t_lemin *l)
@@ -109,6 +111,11 @@ void	ft_create_rooms(t_rooms **rooms)
 
 void	find_start_or_end(t_lemin *l)
 {
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
 	if (ft_strcmp(l->line, "##start") == 0)
 	{
 		get_next_line(0, &l->line);
@@ -123,7 +130,10 @@ void	find_start_or_end(t_lemin *l)
 				validation(l);
 			}
 			else
-				l->start = l->line;
+			{
+				while (l->line[i] && l->line[i] != ' ')
+					l->start[j++] = l->line[i++];
+			}
 		}
 		ft_printf("start: %s\n", l->start);
 	}
@@ -141,7 +151,10 @@ void	find_start_or_end(t_lemin *l)
 				validation(l);
 			}
 			else
-				l->end = l->line;
+			{
+				while (l->line[i] && l->line[i] != ' ')
+					l->end[j++] = l->line[i++];
+			}
 		}
 		ft_printf("end: %s\n", l->end);
 	}
