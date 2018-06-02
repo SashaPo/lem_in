@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/opokusyn/Projects/lem_in/hi.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/hi.c.o"
   "/Users/opokusyn/Projects/lem_in/lem_in.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/lem_in.c.o"
   "/Users/opokusyn/Projects/lem_in/main.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o"
+  "/Users/opokusyn/Projects/lem_in/rooms.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/rooms.c.o"
   "/Users/opokusyn/Projects/lem_in/validation.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/validation.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")

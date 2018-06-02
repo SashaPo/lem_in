@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ft.dir/libft/ft_atoi.c.o"
+  "CMakeFiles/ft.dir/libft/ft_atol.c.o"
   "CMakeFiles/ft.dir/libft/ft_bzero.c.o"
   "CMakeFiles/ft.dir/libft/ft_del.c.o"
   "CMakeFiles/ft.dir/libft/ft_isalnum.c.o"

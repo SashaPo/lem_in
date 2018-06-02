@@ -81,9 +81,33 @@ CMakeFiles/ft.dir/libft/ft_atoi.c.o.provides: CMakeFiles/ft.dir/libft/ft_atoi.c.
 CMakeFiles/ft.dir/libft/ft_atoi.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_atoi.c.o
 
 
+CMakeFiles/ft.dir/libft/ft_atol.c.o: CMakeFiles/ft.dir/flags.make
+CMakeFiles/ft.dir/libft/ft_atol.c.o: ../libft/ft_atol.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ft.dir/libft/ft_atol.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_atol.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_atol.c
+
+CMakeFiles/ft.dir/libft/ft_atol.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft.dir/libft/ft_atol.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/opokusyn/Projects/lem_in/libft/ft_atol.c > CMakeFiles/ft.dir/libft/ft_atol.c.i
+
+CMakeFiles/ft.dir/libft/ft_atol.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft.dir/libft/ft_atol.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/opokusyn/Projects/lem_in/libft/ft_atol.c -o CMakeFiles/ft.dir/libft/ft_atol.c.s
+
+CMakeFiles/ft.dir/libft/ft_atol.c.o.requires:
+
+.PHONY : CMakeFiles/ft.dir/libft/ft_atol.c.o.requires
+
+CMakeFiles/ft.dir/libft/ft_atol.c.o.provides: CMakeFiles/ft.dir/libft/ft_atol.c.o.requires
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_atol.c.o.provides.build
+.PHONY : CMakeFiles/ft.dir/libft/ft_atol.c.o.provides
+
+CMakeFiles/ft.dir/libft/ft_atol.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_atol.c.o
+
+
 CMakeFiles/ft.dir/libft/ft_bzero.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ft.dir/libft/ft_bzero.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft.dir/libft/ft_bzero.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_bzero.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_bzero.c
 
 CMakeFiles/ft.dir/libft/ft_bzero.c.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/ft.dir/libft/ft_bzero.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_
 
 CMakeFiles/ft.dir/libft/ft_del.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_del.c.o: ../libft/ft_del.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ft.dir/libft/ft_del.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft.dir/libft/ft_del.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_del.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_del.c
 
 CMakeFiles/ft.dir/libft/ft_del.c.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/ft.dir/libft/ft_del.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_de
 
 CMakeFiles/ft.dir/libft/ft_isalnum.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_isalnum.c.o: ../libft/ft_isalnum.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ft.dir/libft/ft_isalnum.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft.dir/libft/ft_isalnum.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_isalnum.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_isalnum.c
 
 CMakeFiles/ft.dir/libft/ft_isalnum.c.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/ft.dir/libft/ft_isalnum.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_isalpha.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_isalpha.c.o: ../libft/ft_isalpha.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ft.dir/libft/ft_isalpha.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft.dir/libft/ft_isalpha.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_isalpha.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_isalpha.c
 
 CMakeFiles/ft.dir/libft/ft_isalpha.c.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/ft.dir/libft/ft_isalpha.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_isascii.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_isascii.c.o: ../libft/ft_isascii.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ft.dir/libft/ft_isascii.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft.dir/libft/ft_isascii.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_isascii.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_isascii.c
 
 CMakeFiles/ft.dir/libft/ft_isascii.c.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/ft.dir/libft/ft_isascii.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_isdigit.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_isdigit.c.o: ../libft/ft_isdigit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ft.dir/libft/ft_isdigit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft.dir/libft/ft_isdigit.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_isdigit.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_isdigit.c
 
 CMakeFiles/ft.dir/libft/ft_isdigit.c.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/ft.dir/libft/ft_isdigit.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_isprint.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_isprint.c.o: ../libft/ft_isprint.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ft.dir/libft/ft_isprint.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft.dir/libft/ft_isprint.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_isprint.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_isprint.c
 
 CMakeFiles/ft.dir/libft/ft_isprint.c.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/ft.dir/libft/ft_isprint.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_itoa.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa.c.o: ../libft/ft_itoa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ft.dir/libft/ft_itoa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft.dir/libft/ft_itoa.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa.c
 
 CMakeFiles/ft.dir/libft/ft_itoa.c.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/ft.dir/libft/ft_itoa.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_i
 
 CMakeFiles/ft.dir/libft/ft_itoa_base.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa_base.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa_base.c
 
 CMakeFiles/ft.dir/libft/ft_itoa_base.c.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/ft.dir/libft/ft_itoa_base.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o: ../libft/ft_itoa_base_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa_base_2.c
 
 CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/ft.dir/libft/ft_itoa_base_2.c.o.provides.build: CMakeFiles/ft.dir/lib
 
 CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o: ../libft/ft_itoa_base_long_2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa_base_long_2.c
 
 CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/ft.dir/libft/ft_itoa_base_long_2.c.o.provides.build: CMakeFiles/ft.di
 
 CMakeFiles/ft.dir/libft/ft_itoa_long.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa_long.c.o: ../libft/ft_itoa_long.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_long.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_long.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa_long.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa_long.c
 
 CMakeFiles/ft.dir/libft/ft_itoa_long.c.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/ft.dir/libft/ft_itoa_long.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o: ../libft/ft_itoa_ulong.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_itoa_ulong.c
 
 CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/ft.dir/libft/ft_itoa_ulong.c.o.provides.build: CMakeFiles/ft.dir/libf
 
 CMakeFiles/ft.dir/libft/ft_lst_size.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lst_size.c.o: ../libft/ft_lst_size.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/ft.dir/libft/ft_lst_size.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft.dir/libft/ft_lst_size.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lst_size.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lst_size.c
 
 CMakeFiles/ft.dir/libft/ft_lst_size.c.i: cmake_force
@@ -419,7 +443,7 @@ CMakeFiles/ft.dir/libft/ft_lst_size.c.o.provides.build: CMakeFiles/ft.dir/libft/
 
 CMakeFiles/ft.dir/libft/ft_lstadd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/ft.dir/libft/ft_lstadd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft.dir/libft/ft_lstadd.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstadd.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstadd.c
 
 CMakeFiles/ft.dir/libft/ft_lstadd.c.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/ft.dir/libft/ft_lstadd.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_lstclear.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstclear.c.o: ../libft/ft_lstclear.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ft.dir/libft/ft_lstclear.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft.dir/libft/ft_lstclear.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstclear.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstclear.c
 
 CMakeFiles/ft.dir/libft/ft_lstclear.c.i: cmake_force
@@ -467,7 +491,7 @@ CMakeFiles/ft.dir/libft/ft_lstclear.c.o.provides.build: CMakeFiles/ft.dir/libft/
 
 CMakeFiles/ft.dir/libft/ft_lstdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstdel.c.o: ../libft/ft_lstdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ft.dir/libft/ft_lstdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft.dir/libft/ft_lstdel.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstdel.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstdel.c
 
 CMakeFiles/ft.dir/libft/ft_lstdel.c.i: cmake_force
@@ -491,7 +515,7 @@ CMakeFiles/ft.dir/libft/ft_lstdel.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_lstdelone.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstdelone.c.o: ../libft/ft_lstdelone.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ft.dir/libft/ft_lstdelone.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft.dir/libft/ft_lstdelone.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstdelone.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstdelone.c
 
 CMakeFiles/ft.dir/libft/ft_lstdelone.c.i: cmake_force
@@ -515,7 +539,7 @@ CMakeFiles/ft.dir/libft/ft_lstdelone.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_lstiter.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstiter.c.o: ../libft/ft_lstiter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ft.dir/libft/ft_lstiter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft.dir/libft/ft_lstiter.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstiter.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstiter.c
 
 CMakeFiles/ft.dir/libft/ft_lstiter.c.i: cmake_force
@@ -539,7 +563,7 @@ CMakeFiles/ft.dir/libft/ft_lstiter.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_lstmap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstmap.c.o: ../libft/ft_lstmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ft.dir/libft/ft_lstmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft.dir/libft/ft_lstmap.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstmap.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstmap.c
 
 CMakeFiles/ft.dir/libft/ft_lstmap.c.i: cmake_force
@@ -563,7 +587,7 @@ CMakeFiles/ft.dir/libft/ft_lstmap.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_lstnew.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstnew.c.o: ../libft/ft_lstnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ft.dir/libft/ft_lstnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft.dir/libft/ft_lstnew.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstnew.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstnew.c
 
 CMakeFiles/ft.dir/libft/ft_lstnew.c.i: cmake_force
@@ -587,7 +611,7 @@ CMakeFiles/ft.dir/libft/ft_lstnew.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o: ../libft/ft_lstpush_b.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_lstpush_b.c
 
 CMakeFiles/ft.dir/libft/ft_lstpush_b.c.i: cmake_force
@@ -611,7 +635,7 @@ CMakeFiles/ft.dir/libft/ft_lstpush_b.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_memalloc.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memalloc.c.o: ../libft/ft_memalloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ft.dir/libft/ft_memalloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft.dir/libft/ft_memalloc.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memalloc.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memalloc.c
 
 CMakeFiles/ft.dir/libft/ft_memalloc.c.i: cmake_force
@@ -635,7 +659,7 @@ CMakeFiles/ft.dir/libft/ft_memalloc.c.o.provides.build: CMakeFiles/ft.dir/libft/
 
 CMakeFiles/ft.dir/libft/ft_memccpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memccpy.c.o: ../libft/ft_memccpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ft.dir/libft/ft_memccpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft.dir/libft/ft_memccpy.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memccpy.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memccpy.c
 
 CMakeFiles/ft.dir/libft/ft_memccpy.c.i: cmake_force
@@ -659,7 +683,7 @@ CMakeFiles/ft.dir/libft/ft_memccpy.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_memchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memchr.c.o: ../libft/ft_memchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/ft.dir/libft/ft_memchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft.dir/libft/ft_memchr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memchr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memchr.c
 
 CMakeFiles/ft.dir/libft/ft_memchr.c.i: cmake_force
@@ -683,7 +707,7 @@ CMakeFiles/ft.dir/libft/ft_memchr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_memcmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memcmp.c.o: ../libft/ft_memcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/ft.dir/libft/ft_memcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft.dir/libft/ft_memcmp.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memcmp.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memcmp.c
 
 CMakeFiles/ft.dir/libft/ft_memcmp.c.i: cmake_force
@@ -707,7 +731,7 @@ CMakeFiles/ft.dir/libft/ft_memcmp.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_memcpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memcpy.c.o: ../libft/ft_memcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/ft.dir/libft/ft_memcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft.dir/libft/ft_memcpy.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memcpy.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memcpy.c
 
 CMakeFiles/ft.dir/libft/ft_memcpy.c.i: cmake_force
@@ -731,7 +755,7 @@ CMakeFiles/ft.dir/libft/ft_memcpy.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_memdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memdel.c.o: ../libft/ft_memdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/ft.dir/libft/ft_memdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft.dir/libft/ft_memdel.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memdel.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memdel.c
 
 CMakeFiles/ft.dir/libft/ft_memdel.c.i: cmake_force
@@ -755,7 +779,7 @@ CMakeFiles/ft.dir/libft/ft_memdel.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_memmove.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memmove.c.o: ../libft/ft_memmove.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/ft.dir/libft/ft_memmove.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft.dir/libft/ft_memmove.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memmove.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memmove.c
 
 CMakeFiles/ft.dir/libft/ft_memmove.c.i: cmake_force
@@ -779,7 +803,7 @@ CMakeFiles/ft.dir/libft/ft_memmove.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_memset.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_memset.c.o: ../libft/ft_memset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/ft.dir/libft/ft_memset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft.dir/libft/ft_memset.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_memset.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_memset.c
 
 CMakeFiles/ft.dir/libft/ft_memset.c.i: cmake_force
@@ -803,7 +827,7 @@ CMakeFiles/ft.dir/libft/ft_memset.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_putchar.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putchar.c.o: ../libft/ft_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/ft.dir/libft/ft_putchar.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft.dir/libft/ft_putchar.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putchar.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putchar.c
 
 CMakeFiles/ft.dir/libft/ft_putchar.c.i: cmake_force
@@ -827,7 +851,7 @@ CMakeFiles/ft.dir/libft/ft_putchar.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o: ../libft/ft_putchar_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putchar_fd.c
 
 CMakeFiles/ft.dir/libft/ft_putchar_fd.c.i: cmake_force
@@ -851,7 +875,7 @@ CMakeFiles/ft.dir/libft/ft_putchar_fd.c.o.provides.build: CMakeFiles/ft.dir/libf
 
 CMakeFiles/ft.dir/libft/ft_putendl.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putendl.c.o: ../libft/ft_putendl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/ft.dir/libft/ft_putendl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft.dir/libft/ft_putendl.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putendl.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putendl.c
 
 CMakeFiles/ft.dir/libft/ft_putendl.c.i: cmake_force
@@ -875,7 +899,7 @@ CMakeFiles/ft.dir/libft/ft_putendl.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o: ../libft/ft_putendl_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putendl_fd.c
 
 CMakeFiles/ft.dir/libft/ft_putendl_fd.c.i: cmake_force
@@ -899,7 +923,7 @@ CMakeFiles/ft.dir/libft/ft_putendl_fd.c.o.provides.build: CMakeFiles/ft.dir/libf
 
 CMakeFiles/ft.dir/libft/ft_putnbr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putnbr.c.o: ../libft/ft_putnbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/ft.dir/libft/ft_putnbr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft.dir/libft/ft_putnbr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putnbr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putnbr.c
 
 CMakeFiles/ft.dir/libft/ft_putnbr.c.i: cmake_force
@@ -923,7 +947,7 @@ CMakeFiles/ft.dir/libft/ft_putnbr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o: ../libft/ft_putnbr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putnbr_fd.c
 
 CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.i: cmake_force
@@ -947,7 +971,7 @@ CMakeFiles/ft.dir/libft/ft_putnbr_fd.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_putstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putstr.c.o: ../libft/ft_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/ft.dir/libft/ft_putstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft.dir/libft/ft_putstr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putstr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putstr.c
 
 CMakeFiles/ft.dir/libft/ft_putstr.c.i: cmake_force
@@ -971,7 +995,7 @@ CMakeFiles/ft.dir/libft/ft_putstr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o: ../libft/ft_putstr_fd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_putstr_fd.c
 
 CMakeFiles/ft.dir/libft/ft_putstr_fd.c.i: cmake_force
@@ -995,7 +1019,7 @@ CMakeFiles/ft.dir/libft/ft_putstr_fd.c.o.provides.build: CMakeFiles/ft.dir/libft
 
 CMakeFiles/ft.dir/libft/ft_strcat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/ft.dir/libft/ft_strcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft.dir/libft/ft_strcat.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strcat.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strcat.c
 
 CMakeFiles/ft.dir/libft/ft_strcat.c.i: cmake_force
@@ -1019,7 +1043,7 @@ CMakeFiles/ft.dir/libft/ft_strcat.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/ft.dir/libft/ft_strchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft.dir/libft/ft_strchr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strchr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strchr.c
 
 CMakeFiles/ft.dir/libft/ft_strchr.c.i: cmake_force
@@ -1043,7 +1067,7 @@ CMakeFiles/ft.dir/libft/ft_strchr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strclr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strclr.c.o: ../libft/ft_strclr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/ft.dir/libft/ft_strclr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft.dir/libft/ft_strclr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strclr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strclr.c
 
 CMakeFiles/ft.dir/libft/ft_strclr.c.i: cmake_force
@@ -1067,7 +1091,7 @@ CMakeFiles/ft.dir/libft/ft_strclr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strcmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strcmp.c.o: ../libft/ft_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/ft.dir/libft/ft_strcmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft.dir/libft/ft_strcmp.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strcmp.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strcmp.c
 
 CMakeFiles/ft.dir/libft/ft_strcmp.c.i: cmake_force
@@ -1091,7 +1115,7 @@ CMakeFiles/ft.dir/libft/ft_strcmp.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strcpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strcpy.c.o: ../libft/ft_strcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/ft.dir/libft/ft_strcpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft.dir/libft/ft_strcpy.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strcpy.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strcpy.c
 
 CMakeFiles/ft.dir/libft/ft_strcpy.c.i: cmake_force
@@ -1115,7 +1139,7 @@ CMakeFiles/ft.dir/libft/ft_strcpy.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strdel.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/ft.dir/libft/ft_strdel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft.dir/libft/ft_strdel.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strdel.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strdel.c
 
 CMakeFiles/ft.dir/libft/ft_strdel.c.i: cmake_force
@@ -1139,7 +1163,7 @@ CMakeFiles/ft.dir/libft/ft_strdel.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strdup.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/ft.dir/libft/ft_strdup.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft.dir/libft/ft_strdup.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strdup.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strdup.c
 
 CMakeFiles/ft.dir/libft/ft_strdup.c.i: cmake_force
@@ -1163,7 +1187,7 @@ CMakeFiles/ft.dir/libft/ft_strdup.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strequ.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strequ.c.o: ../libft/ft_strequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/ft.dir/libft/ft_strequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft.dir/libft/ft_strequ.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strequ.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strequ.c
 
 CMakeFiles/ft.dir/libft/ft_strequ.c.i: cmake_force
@@ -1187,7 +1211,7 @@ CMakeFiles/ft.dir/libft/ft_strequ.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_striter.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_striter.c.o: ../libft/ft_striter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/ft.dir/libft/ft_striter.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft.dir/libft/ft_striter.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_striter.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_striter.c
 
 CMakeFiles/ft.dir/libft/ft_striter.c.i: cmake_force
@@ -1211,7 +1235,7 @@ CMakeFiles/ft.dir/libft/ft_striter.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_striteri.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_striteri.c.o: ../libft/ft_striteri.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/ft.dir/libft/ft_striteri.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft.dir/libft/ft_striteri.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_striteri.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_striteri.c
 
 CMakeFiles/ft.dir/libft/ft_striteri.c.i: cmake_force
@@ -1235,7 +1259,7 @@ CMakeFiles/ft.dir/libft/ft_striteri.c.o.provides.build: CMakeFiles/ft.dir/libft/
 
 CMakeFiles/ft.dir/libft/ft_strjoin.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/ft.dir/libft/ft_strjoin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft.dir/libft/ft_strjoin.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strjoin.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strjoin.c
 
 CMakeFiles/ft.dir/libft/ft_strjoin.c.i: cmake_force
@@ -1259,7 +1283,7 @@ CMakeFiles/ft.dir/libft/ft_strjoin.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strlcat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/ft.dir/libft/ft_strlcat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft.dir/libft/ft_strlcat.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strlcat.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strlcat.c
 
 CMakeFiles/ft.dir/libft/ft_strlcat.c.i: cmake_force
@@ -1283,7 +1307,7 @@ CMakeFiles/ft.dir/libft/ft_strlcat.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strlen.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/ft.dir/libft/ft_strlen.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft.dir/libft/ft_strlen.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strlen.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strlen.c
 
 CMakeFiles/ft.dir/libft/ft_strlen.c.i: cmake_force
@@ -1307,7 +1331,7 @@ CMakeFiles/ft.dir/libft/ft_strlen.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strmap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strmap.c.o: ../libft/ft_strmap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/ft.dir/libft/ft_strmap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft.dir/libft/ft_strmap.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strmap.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strmap.c
 
 CMakeFiles/ft.dir/libft/ft_strmap.c.i: cmake_force
@@ -1331,7 +1355,7 @@ CMakeFiles/ft.dir/libft/ft_strmap.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strmapi.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strmapi.c.o: ../libft/ft_strmapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/ft.dir/libft/ft_strmapi.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft.dir/libft/ft_strmapi.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strmapi.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strmapi.c
 
 CMakeFiles/ft.dir/libft/ft_strmapi.c.i: cmake_force
@@ -1355,7 +1379,7 @@ CMakeFiles/ft.dir/libft/ft_strmapi.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strncat.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strncat.c.o: ../libft/ft_strncat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/ft.dir/libft/ft_strncat.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft.dir/libft/ft_strncat.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strncat.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strncat.c
 
 CMakeFiles/ft.dir/libft/ft_strncat.c.i: cmake_force
@@ -1379,7 +1403,7 @@ CMakeFiles/ft.dir/libft/ft_strncat.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strncmp.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strncmp.c.o: ../libft/ft_strncmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/ft.dir/libft/ft_strncmp.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft.dir/libft/ft_strncmp.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strncmp.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strncmp.c
 
 CMakeFiles/ft.dir/libft/ft_strncmp.c.i: cmake_force
@@ -1403,7 +1427,7 @@ CMakeFiles/ft.dir/libft/ft_strncmp.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strncpy.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strncpy.c.o: ../libft/ft_strncpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/ft.dir/libft/ft_strncpy.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft.dir/libft/ft_strncpy.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strncpy.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strncpy.c
 
 CMakeFiles/ft.dir/libft/ft_strncpy.c.i: cmake_force
@@ -1427,7 +1451,7 @@ CMakeFiles/ft.dir/libft/ft_strncpy.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strnequ.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strnequ.c.o: ../libft/ft_strnequ.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/ft.dir/libft/ft_strnequ.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/ft.dir/libft/ft_strnequ.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strnequ.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strnequ.c
 
 CMakeFiles/ft.dir/libft/ft_strnequ.c.i: cmake_force
@@ -1451,7 +1475,7 @@ CMakeFiles/ft.dir/libft/ft_strnequ.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strnew.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/ft.dir/libft/ft_strnew.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/ft.dir/libft/ft_strnew.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strnew.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strnew.c
 
 CMakeFiles/ft.dir/libft/ft_strnew.c.i: cmake_force
@@ -1475,7 +1499,7 @@ CMakeFiles/ft.dir/libft/ft_strnew.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strnstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strnstr.c.o: ../libft/ft_strnstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/ft.dir/libft/ft_strnstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/ft.dir/libft/ft_strnstr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strnstr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strnstr.c
 
 CMakeFiles/ft.dir/libft/ft_strnstr.c.i: cmake_force
@@ -1499,7 +1523,7 @@ CMakeFiles/ft.dir/libft/ft_strnstr.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strrchr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strrchr.c.o: ../libft/ft_strrchr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/ft.dir/libft/ft_strrchr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/ft.dir/libft/ft_strrchr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strrchr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strrchr.c
 
 CMakeFiles/ft.dir/libft/ft_strrchr.c.i: cmake_force
@@ -1523,7 +1547,7 @@ CMakeFiles/ft.dir/libft/ft_strrchr.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_strsplit.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strsplit.c.o: ../libft/ft_strsplit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/ft.dir/libft/ft_strsplit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/ft.dir/libft/ft_strsplit.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strsplit.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strsplit.c
 
 CMakeFiles/ft.dir/libft/ft_strsplit.c.i: cmake_force
@@ -1547,7 +1571,7 @@ CMakeFiles/ft.dir/libft/ft_strsplit.c.o.provides.build: CMakeFiles/ft.dir/libft/
 
 CMakeFiles/ft.dir/libft/ft_strstr.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strstr.c.o: ../libft/ft_strstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/ft.dir/libft/ft_strstr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/ft.dir/libft/ft_strstr.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strstr.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strstr.c
 
 CMakeFiles/ft.dir/libft/ft_strstr.c.i: cmake_force
@@ -1571,7 +1595,7 @@ CMakeFiles/ft.dir/libft/ft_strstr.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strsub.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strsub.c.o: ../libft/ft_strsub.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/ft.dir/libft/ft_strsub.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/ft.dir/libft/ft_strsub.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strsub.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strsub.c
 
 CMakeFiles/ft.dir/libft/ft_strsub.c.i: cmake_force
@@ -1595,7 +1619,7 @@ CMakeFiles/ft.dir/libft/ft_strsub.c.o.provides.build: CMakeFiles/ft.dir/libft/ft
 
 CMakeFiles/ft.dir/libft/ft_strtrim.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_strtrim.c.o: ../libft/ft_strtrim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/ft.dir/libft/ft_strtrim.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/ft.dir/libft/ft_strtrim.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_strtrim.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_strtrim.c
 
 CMakeFiles/ft.dir/libft/ft_strtrim.c.i: cmake_force
@@ -1619,7 +1643,7 @@ CMakeFiles/ft.dir/libft/ft_strtrim.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_swap.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_swap.c.o: ../libft/ft_swap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/ft.dir/libft/ft_swap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ft.dir/libft/ft_swap.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_swap.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_swap.c
 
 CMakeFiles/ft.dir/libft/ft_swap.c.i: cmake_force
@@ -1643,7 +1667,7 @@ CMakeFiles/ft.dir/libft/ft_swap.c.o.provides.build: CMakeFiles/ft.dir/libft/ft_s
 
 CMakeFiles/ft.dir/libft/ft_tolower.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_tolower.c.o: ../libft/ft_tolower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/ft.dir/libft/ft_tolower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/ft.dir/libft/ft_tolower.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_tolower.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_tolower.c
 
 CMakeFiles/ft.dir/libft/ft_tolower.c.i: cmake_force
@@ -1667,7 +1691,7 @@ CMakeFiles/ft.dir/libft/ft_tolower.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/ft_toupper.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_toupper.c.o: ../libft/ft_toupper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/ft.dir/libft/ft_toupper.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/ft.dir/libft/ft_toupper.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_toupper.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_toupper.c
 
 CMakeFiles/ft.dir/libft/ft_toupper.c.i: cmake_force
@@ -1691,7 +1715,7 @@ CMakeFiles/ft.dir/libft/ft_toupper.c.o.provides.build: CMakeFiles/ft.dir/libft/f
 
 CMakeFiles/ft.dir/libft/get_next_line.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/get_next_line.c.o: ../libft/get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/ft.dir/libft/get_next_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/ft.dir/libft/get_next_line.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/get_next_line.c.o   -c /Users/opokusyn/Projects/lem_in/libft/get_next_line.c
 
 CMakeFiles/ft.dir/libft/get_next_line.c.i: cmake_force
@@ -1715,7 +1739,7 @@ CMakeFiles/ft.dir/libft/get_next_line.c.o.provides.build: CMakeFiles/ft.dir/libf
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o: ../libft/ft_printf/ft_additional_functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_additional_functions.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.i: cmake_force
@@ -1739,7 +1763,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions.c.o.provides.build: CM
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o: ../libft/ft_printf/ft_additional_functions1.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_additional_functions1.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.i: cmake_force
@@ -1763,7 +1787,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions1.c.o.provides.build: C
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o: ../libft/ft_printf/ft_additional_functions2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_additional_functions2.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.i: cmake_force
@@ -1787,7 +1811,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions2.c.o.provides.build: C
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o: ../libft/ft_printf/ft_additional_functions3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_additional_functions3.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.i: cmake_force
@@ -1811,7 +1835,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions3.c.o.provides.build: C
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o: ../libft/ft_printf/ft_additional_functions4.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_additional_functions4.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.i: cmake_force
@@ -1835,7 +1859,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_additional_functions4.c.o.provides.build: C
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o: ../libft/ft_printf/ft_bool.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_bool.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.i: cmake_force
@@ -1859,7 +1883,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_bool.c.o.provides.build: CMakeFiles/ft.dir/
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o: ../libft/ft_printf/ft_flag_parser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_flag_parser.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.i: cmake_force
@@ -1883,7 +1907,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_flag_parser.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o: ../libft/ft_printf/ft_handle_b_for_binary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_b_for_binary.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.i: cmake_force
@@ -1907,7 +1931,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_b_for_binary.c.o.provides.build: CMa
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o: ../libft/ft_printf/ft_handle_c.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_c.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.i: cmake_force
@@ -1931,7 +1955,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_c.c.o.provides.build: CMakeFiles/ft.
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o: ../libft/ft_printf/ft_handle_di.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_di.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.i: cmake_force
@@ -1955,7 +1979,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_di.c.o.provides.build: CMakeFiles/ft
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o: ../libft/ft_printf/ft_handle_o.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_o.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.i: cmake_force
@@ -1979,7 +2003,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_o.c.o.provides.build: CMakeFiles/ft.
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o: ../libft/ft_printf/ft_handle_p_for_pointer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_p_for_pointer.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.i: cmake_force
@@ -2003,7 +2027,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_p_for_pointer.c.o.provides.build: CM
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o: ../libft/ft_printf/ft_handle_percent_and_unknown.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_percent_and_unknown.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.i: cmake_force
@@ -2027,7 +2051,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_percent_and_unknown.c.o.provides.bui
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o: ../libft/ft_printf/ft_handle_str.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_str.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.i: cmake_force
@@ -2051,7 +2075,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_str.c.o.provides.build: CMakeFiles/f
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o: ../libft/ft_printf/ft_handle_u.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_u.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.i: cmake_force
@@ -2075,7 +2099,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_u.c.o.provides.build: CMakeFiles/ft.
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o: ../libft/ft_printf/ft_handle_x.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_handle_x.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.i: cmake_force
@@ -2099,7 +2123,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_handle_x.c.o.provides.build: CMakeFiles/ft.
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o: ../libft/ft_printf/ft_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_init.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.i: cmake_force
@@ -2123,7 +2147,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_init.c.o.provides.build: CMakeFiles/ft.dir/
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o: ../libft/ft_printf/ft_length_parser.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_length_parser.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.i: cmake_force
@@ -2147,7 +2171,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_length_parser.c.o.provides.build: CMakeFile
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o: ../libft/ft_printf/ft_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_printf.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.i: cmake_force
@@ -2171,7 +2195,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_printf.c.o.provides.build: CMakeFiles/ft.di
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o: ../libft/ft_printf/ft_specifiers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_specifiers.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.i: cmake_force
@@ -2195,7 +2219,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o.provides.build: CMakeFiles/f
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o: CMakeFiles/ft.dir/flags.make
 CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o: ../libft/ft_printf/ft_unicode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o   -c /Users/opokusyn/Projects/lem_in/libft/ft_printf/ft_unicode.c
 
 CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.i: cmake_force
@@ -2220,6 +2244,7 @@ CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o.provides.build: CMakeFiles/ft.d
 # Object files for target ft
 ft_OBJECTS = \
 "CMakeFiles/ft.dir/libft/ft_atoi.c.o" \
+"CMakeFiles/ft.dir/libft/ft_atol.c.o" \
 "CMakeFiles/ft.dir/libft/ft_bzero.c.o" \
 "CMakeFiles/ft.dir/libft/ft_del.c.o" \
 "CMakeFiles/ft.dir/libft/ft_isalnum.c.o" \
@@ -2314,6 +2339,7 @@ ft_OBJECTS = \
 ft_EXTERNAL_OBJECTS =
 
 libft.a: CMakeFiles/ft.dir/libft/ft_atoi.c.o
+libft.a: CMakeFiles/ft.dir/libft/ft_atol.c.o
 libft.a: CMakeFiles/ft.dir/libft/ft_bzero.c.o
 libft.a: CMakeFiles/ft.dir/libft/ft_del.c.o
 libft.a: CMakeFiles/ft.dir/libft/ft_isalnum.c.o
@@ -2405,7 +2431,7 @@ libft.a: CMakeFiles/ft.dir/libft/ft_printf/ft_specifiers.c.o
 libft.a: CMakeFiles/ft.dir/libft/ft_printf/ft_unicode.c.o
 libft.a: CMakeFiles/ft.dir/build.make
 libft.a: CMakeFiles/ft.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Linking C static library libft.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Linking C static library libft.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ft.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft.dir/link.txt --verbose=$(VERBOSE)
 
@@ -2415,6 +2441,7 @@ CMakeFiles/ft.dir/build: libft.a
 .PHONY : CMakeFiles/ft.dir/build
 
 CMakeFiles/ft.dir/requires: CMakeFiles/ft.dir/libft/ft_atoi.c.o.requires
+CMakeFiles/ft.dir/requires: CMakeFiles/ft.dir/libft/ft_atol.c.o.requires
 CMakeFiles/ft.dir/requires: CMakeFiles/ft.dir/libft/ft_bzero.c.o.requires
 CMakeFiles/ft.dir/requires: CMakeFiles/ft.dir/libft/ft_del.c.o.requires
 CMakeFiles/ft.dir/requires: CMakeFiles/ft.dir/libft/ft_isalnum.c.o.requires

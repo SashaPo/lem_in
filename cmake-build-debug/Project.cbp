@@ -134,6 +134,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/opokusyn/Projects/lem_in/hi.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/Users/opokusyn/Projects/lem_in/lem_in.c">
 			<Option target="lem_in"/>
 		</Unit>
@@ -141,6 +144,9 @@
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/Users/opokusyn/Projects/lem_in/libft/ft_atoi.c">
+			<Option target="ft"/>
+		</Unit>
+		<Unit filename="/Users/opokusyn/Projects/lem_in/libft/ft_atol.c">
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/opokusyn/Projects/lem_in/libft/ft_bzero.c">
@@ -414,6 +420,9 @@
 			<Option target="ft"/>
 		</Unit>
 		<Unit filename="/Users/opokusyn/Projects/lem_in/main.c">
+			<Option target="lem_in"/>
+		</Unit>
+		<Unit filename="/Users/opokusyn/Projects/lem_in/rooms.c">
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/Users/opokusyn/Projects/lem_in/validation.c">

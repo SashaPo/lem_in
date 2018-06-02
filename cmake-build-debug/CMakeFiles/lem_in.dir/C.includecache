@@ -14,6 +14,10 @@ string.h
 stdlib.h
 -
 
+/Users/opokusyn/Projects/lem_in/hi.c
+lem_in.h
+/Users/opokusyn/Projects/lem_in/lem_in.h
+
 /Users/opokusyn/Projects/lem_in/lem_in.c
 lem_in.h
 /Users/opokusyn/Projects/lem_in/lem_in.h
@@ -29,6 +33,10 @@ libft.h
 /Users/opokusyn/Projects/lem_in/main.c
 fcntl.h
 -
+lem_in.h
+/Users/opokusyn/Projects/lem_in/lem_in.h
+
+/Users/opokusyn/Projects/lem_in/rooms.c
 lem_in.h
 /Users/opokusyn/Projects/lem_in/lem_in.h
 

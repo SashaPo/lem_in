@@ -136,6 +136,33 @@ ft/fast:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
+hi.o: hi.c.o
+
+.PHONY : hi.o
+
+# target to build an object file
+hi.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/hi.c.o
+.PHONY : hi.c.o
+
+hi.i: hi.c.i
+
+.PHONY : hi.i
+
+# target to preprocess a source file
+hi.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/hi.c.i
+.PHONY : hi.c.i
+
+hi.s: hi.c.s
+
+.PHONY : hi.s
+
+# target to generate assembly for a file
+hi.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/hi.c.s
+.PHONY : hi.c.s
+
 lem_in.o: lem_in.c.o
 
 .PHONY : lem_in.o
@@ -189,6 +216,33 @@ libft/ft_atoi.s: libft/ft_atoi.c.s
 libft/ft_atoi.c.s:
 	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_atoi.c.s
 .PHONY : libft/ft_atoi.c.s
+
+libft/ft_atol.o: libft/ft_atol.c.o
+
+.PHONY : libft/ft_atol.o
+
+# target to build an object file
+libft/ft_atol.c.o:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_atol.c.o
+.PHONY : libft/ft_atol.c.o
+
+libft/ft_atol.i: libft/ft_atol.c.i
+
+.PHONY : libft/ft_atol.i
+
+# target to preprocess a source file
+libft/ft_atol.c.i:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_atol.c.i
+.PHONY : libft/ft_atol.c.i
+
+libft/ft_atol.s: libft/ft_atol.c.s
+
+.PHONY : libft/ft_atol.s
+
+# target to generate assembly for a file
+libft/ft_atol.c.s:
+	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/libft/ft_atol.c.s
+.PHONY : libft/ft_atol.c.s
 
 libft/ft_bzero.o: libft/ft_bzero.c.o
 
@@ -2620,6 +2674,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.s
 .PHONY : main.c.s
 
+rooms.o: rooms.c.o
+
+.PHONY : rooms.o
+
+# target to build an object file
+rooms.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/rooms.c.o
+.PHONY : rooms.c.o
+
+rooms.i: rooms.c.i
+
+.PHONY : rooms.i
+
+# target to preprocess a source file
+rooms.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/rooms.c.i
+.PHONY : rooms.c.i
+
+rooms.s: rooms.c.s
+
+.PHONY : rooms.s
+
+# target to generate assembly for a file
+rooms.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/rooms.c.s
+.PHONY : rooms.c.s
+
 validation.o: validation.c.o
 
 .PHONY : validation.o
@@ -2657,12 +2738,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... lem_in"
 	@echo "... ft"
+	@echo "... hi.o"
+	@echo "... hi.i"
+	@echo "... hi.s"
 	@echo "... lem_in.o"
 	@echo "... lem_in.i"
 	@echo "... lem_in.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
+	@echo "... libft/ft_atol.o"
+	@echo "... libft/ft_atol.i"
+	@echo "... libft/ft_atol.s"
 	@echo "... libft/ft_bzero.o"
 	@echo "... libft/ft_bzero.i"
 	@echo "... libft/ft_bzero.s"
@@ -2933,6 +3020,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... rooms.o"
+	@echo "... rooms.i"
+	@echo "... rooms.s"
 	@echo "... validation.o"
 	@echo "... validation.i"
 	@echo "... validation.s"

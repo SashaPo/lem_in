@@ -4,6 +4,9 @@
 CMakeFiles/ft.dir/libft/ft_atoi.c.o
  /Users/opokusyn/Projects/lem_in/libft/ft_atoi.c
  /Users/opokusyn/Projects/lem_in/libft/libft.h
+CMakeFiles/ft.dir/libft/ft_atol.c.o
+ /Users/opokusyn/Projects/lem_in/libft/ft_atol.c
+ /Users/opokusyn/Projects/lem_in/libft/libft.h
 CMakeFiles/ft.dir/libft/ft_bzero.c.o
  /Users/opokusyn/Projects/lem_in/libft/ft_bzero.c
  /Users/opokusyn/Projects/lem_in/libft/libft.h

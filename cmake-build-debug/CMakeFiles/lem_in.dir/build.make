@@ -57,9 +57,33 @@ include CMakeFiles/lem_in.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lem_in.dir/flags.make
 
+CMakeFiles/lem_in.dir/hi.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/hi.c.o: ../hi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lem_in.dir/hi.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/hi.c.o   -c /Users/opokusyn/Projects/lem_in/hi.c
+
+CMakeFiles/lem_in.dir/hi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/hi.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/opokusyn/Projects/lem_in/hi.c > CMakeFiles/lem_in.dir/hi.c.i
+
+CMakeFiles/lem_in.dir/hi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/hi.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/opokusyn/Projects/lem_in/hi.c -o CMakeFiles/lem_in.dir/hi.c.s
+
+CMakeFiles/lem_in.dir/hi.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/hi.c.o.requires
+
+CMakeFiles/lem_in.dir/hi.c.o.provides: CMakeFiles/lem_in.dir/hi.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/hi.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/hi.c.o.provides
+
+CMakeFiles/lem_in.dir/hi.c.o.provides.build: CMakeFiles/lem_in.dir/hi.c.o
+
+
 CMakeFiles/lem_in.dir/lem_in.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/lem_in.c.o: ../lem_in.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lem_in.dir/lem_in.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lem_in.dir/lem_in.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/lem_in.c.o   -c /Users/opokusyn/Projects/lem_in/lem_in.c
 
 CMakeFiles/lem_in.dir/lem_in.c.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/lem_in.dir/lem_in.c.o.provides.build: CMakeFiles/lem_in.dir/lem_in.c.
 
 CMakeFiles/lem_in.dir/main.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/lem_in.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lem_in.dir/main.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/main.c.o   -c /Users/opokusyn/Projects/lem_in/main.c
 
 CMakeFiles/lem_in.dir/main.c.i: cmake_force
@@ -105,9 +129,33 @@ CMakeFiles/lem_in.dir/main.c.o.provides: CMakeFiles/lem_in.dir/main.c.o.requires
 CMakeFiles/lem_in.dir/main.c.o.provides.build: CMakeFiles/lem_in.dir/main.c.o
 
 
+CMakeFiles/lem_in.dir/rooms.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/rooms.c.o: ../rooms.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lem_in.dir/rooms.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/rooms.c.o   -c /Users/opokusyn/Projects/lem_in/rooms.c
+
+CMakeFiles/lem_in.dir/rooms.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/rooms.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/opokusyn/Projects/lem_in/rooms.c > CMakeFiles/lem_in.dir/rooms.c.i
+
+CMakeFiles/lem_in.dir/rooms.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/rooms.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/opokusyn/Projects/lem_in/rooms.c -o CMakeFiles/lem_in.dir/rooms.c.s
+
+CMakeFiles/lem_in.dir/rooms.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/rooms.c.o.requires
+
+CMakeFiles/lem_in.dir/rooms.c.o.provides: CMakeFiles/lem_in.dir/rooms.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/rooms.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/rooms.c.o.provides
+
+CMakeFiles/lem_in.dir/rooms.c.o.provides.build: CMakeFiles/lem_in.dir/rooms.c.o
+
+
 CMakeFiles/lem_in.dir/validation.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/validation.c.o: ../validation.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lem_in.dir/validation.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lem_in.dir/validation.c.o"
 	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/validation.c.o   -c /Users/opokusyn/Projects/lem_in/validation.c
 
 CMakeFiles/lem_in.dir/validation.c.i: cmake_force
@@ -131,20 +179,24 @@ CMakeFiles/lem_in.dir/validation.c.o.provides.build: CMakeFiles/lem_in.dir/valid
 
 # Object files for target lem_in
 lem_in_OBJECTS = \
+"CMakeFiles/lem_in.dir/hi.c.o" \
 "CMakeFiles/lem_in.dir/lem_in.c.o" \
 "CMakeFiles/lem_in.dir/main.c.o" \
+"CMakeFiles/lem_in.dir/rooms.c.o" \
 "CMakeFiles/lem_in.dir/validation.c.o"
 
 # External object files for target lem_in
 lem_in_EXTERNAL_OBJECTS =
 
+lem_in: CMakeFiles/lem_in.dir/hi.c.o
 lem_in: CMakeFiles/lem_in.dir/lem_in.c.o
 lem_in: CMakeFiles/lem_in.dir/main.c.o
+lem_in: CMakeFiles/lem_in.dir/rooms.c.o
 lem_in: CMakeFiles/lem_in.dir/validation.c.o
 lem_in: CMakeFiles/lem_in.dir/build.make
 lem_in: libft.a
 lem_in: CMakeFiles/lem_in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable lem_in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable lem_in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -152,8 +204,10 @@ CMakeFiles/lem_in.dir/build: lem_in
 
 .PHONY : CMakeFiles/lem_in.dir/build
 
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/hi.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/lem_in.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/main.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/rooms.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/validation.c.o.requires
 
 .PHONY : CMakeFiles/lem_in.dir/requires

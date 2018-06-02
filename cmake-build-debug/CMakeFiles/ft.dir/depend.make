@@ -4,6 +4,9 @@
 CMakeFiles/ft.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/ft.dir/libft/ft_atoi.c.o: ../libft/libft.h
 
+CMakeFiles/ft.dir/libft/ft_atol.c.o: ../libft/ft_atol.c
+CMakeFiles/ft.dir/libft/ft_atol.c.o: ../libft/libft.h
+
 CMakeFiles/ft.dir/libft/ft_bzero.c.o: ../libft/ft_bzero.c
 CMakeFiles/ft.dir/libft/ft_bzero.c.o: ../libft/libft.h
 

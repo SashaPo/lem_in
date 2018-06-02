@@ -84,6 +84,7 @@ void				ft_strclr(char *s);
 void				ft_putnbr(int n);
 char				*ft_itoa(int n);
 int					ft_printf(const char *format, ...);
+long long			ft_atol(const char *s);
 
 typedef	struct		s_list
 {

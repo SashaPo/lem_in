@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/opokusyn/Projects/lem_in/libft/ft_atoi.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/ft.dir/libft/ft_atoi.c.o"
+  "/Users/opokusyn/Projects/lem_in/libft/ft_atol.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/ft.dir/libft/ft_atol.c.o"
   "/Users/opokusyn/Projects/lem_in/libft/ft_bzero.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/ft.dir/libft/ft_bzero.c.o"
   "/Users/opokusyn/Projects/lem_in/libft/ft_del.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/ft.dir/libft/ft_del.c.o"
   "/Users/opokusyn/Projects/lem_in/libft/ft_isalnum.c" "/Users/opokusyn/Projects/lem_in/cmake-build-debug/CMakeFiles/ft.dir/libft/ft_isalnum.c.o"
