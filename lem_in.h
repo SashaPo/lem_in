@@ -16,7 +16,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "get_next_line.h"
+# include "libft.h"
 
 typedef struct		s_rooms
 {
@@ -24,18 +24,26 @@ typedef struct		s_rooms
 	unsigned int	ant;
 	int				x;
 	int				y;
+	struct s_conn	*connections;
 	struct s_rooms	*next;
 }					t_rooms;
 
+typedef struct		s_conn
+{
+	t_rooms			*room;
+	struct 	s_conn	*next;
+}					t_conn;
+
 typedef struct		s_links
 {
-	int				name1;
-	int				name2;
+	char			*name1;
+	char			*name2;
 	struct 	s_links	*next;
 }					t_links;
 
 typedef struct		s_lemin
 {
+    int             fd;
 	unsigned int	ants;
 	int				comment;
 	char			*start;
@@ -51,10 +59,12 @@ void				get_rooms(t_lemin *l);
 void				get_links(t_lemin *l);
 void				get_comments(t_lemin *l);
 int					validation(t_lemin *l);
-char				*find_path(t_lemin *l);
+void				find_path(t_lemin *l);
 void				ft_create_links(t_links **links);
 void				ft_create_rooms(t_rooms **rooms);
 void				find_start_or_end(t_lemin *l);
 int					check_spaces(t_lemin *l);
+void	print_rooms(t_lemin *l);
+
 
 #endif

@@ -6,18 +6,28 @@
 /*   By: opokusyn <opokusyn@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/29 12:49:38 by opokusyn          #+#    #+#             */
-/*   Updated: 2018/03/12 18:48:27 by opokusyn         ###   ########.fr       */
+/*   Updated: 2017/11/16 16:49:21 by opokusyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
-
+# define BUFF_SIZE 42
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 
+typedef	struct		s_gnl
+{
+	char			*data;
+	int				fd;
+	struct s_gnl	*next;
+}					t_gnl;
+
+char				*itoa_u(unsigned long long value, int base, char type);
+char				*ft_itoa_base(int value, int base);
+char				*ft_itoa_base_2(int value, int base);
 char				*ft_strnstr(const char	*big, const char *little, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -39,6 +49,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
 void				*ft_memset(void *memory, int ch, size_t n);
 char				*ft_strmap(char const *s, char(*f)(char));
 int					ft_strequ(char const *s1, char const *s2);
+int					get_next_line(const int fd, char **line);
 char				*ft_strcat(char *dest, const char *app);
 char				*ft_strcpy(char *dst, const char *src);
 void				ft_striter(char *s, void (*f)(char *));
@@ -72,15 +83,7 @@ int					ft_tolower(int ch);
 void				ft_strclr(char *s);
 void				ft_putnbr(int n);
 char				*ft_itoa(int n);
-char				*ft_itoa_base(int value, int base);
-char				*ft_itoa_base_2(int value, int base);
-char				*ft_itoa_long(long long int n);
-char				*ft_itoa_base_long_2(long long int value, int base);
-char				*ft_itoa_ulong(unsigned long long int n);
-char				*itoa_u(unsigned long long int value, int base, char type);
-char				*itoa_signed(long long int value, int base, char type);
-char				*ft_itoa_double_prec(double n, int prec);
-char				*ft_dtoa(double n);
+int					ft_printf(const char *format, ...);
 
 typedef	struct		s_list
 {

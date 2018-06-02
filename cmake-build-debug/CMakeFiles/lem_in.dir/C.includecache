@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libft/libft.h
+unistd.h
+-
+string.h
+-
+stdlib.h
+-
+
+/Users/opokusyn/Projects/lem_in/lem_in.c
+lem_in.h
+/Users/opokusyn/Projects/lem_in/lem_in.h
+
+/Users/opokusyn/Projects/lem_in/lem_in.h
+unistd.h
+-
+stdlib.h
+-
+libft.h
+/Users/opokusyn/Projects/lem_in/libft.h
+
+/Users/opokusyn/Projects/lem_in/main.c
+fcntl.h
+-
+lem_in.h
+/Users/opokusyn/Projects/lem_in/lem_in.h
+
+/Users/opokusyn/Projects/lem_in/validation.c
+lem_in.h
+/Users/opokusyn/Projects/lem_in/lem_in.h
+

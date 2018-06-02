@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fcntl.h>
 #include "lem_in.h"
 
 void	this_is_error(void)
@@ -18,69 +19,62 @@ void	this_is_error(void)
 	exit(1);
 }
 
-int		main(void)
+int		main(int ac, char **av)
 {
-	t_lemin	*l;
+	static t_lemin	l;
+	int comments;
 
-	l = malloc(sizeof(t_lemin));
-	ft_init_structure(l);
-	if (!(get_next_line(0, &l->line)))
+    l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
+	comments = 0;
+	if (!(get_next_line(l.fd, &l.line)))
 		this_is_error();
-	get_ants(l);
-	ft_printf("%d\n", l->ants);
-	while (l->line && get_next_line(0, &l->line) > 0)
+	get_ants(&l);
+	ft_printf("%d\n", l.ants);
+	while (l.line && get_next_line(l.fd, &l.line) > 0)
 	{
-		if (ft_strlen(l->line) == 0)
+		if (ft_strlen(l.line) == 0)
 			exit(1);
-		if (ft_strchr(l->line, '-'))
-			get_links(l);
-		else if (l->line[0] == '#' && l->line[1] != '#')
-			ft_printf("%s\n", l->line);
+		if (ft_strchr(l.line, '-'))
+			get_links(&l);
+		else if (l.line[0] == '#' && l.line[1] != '#')
+			comments++;
 		else
-			get_rooms(l);
+			get_rooms(&l);
 	}
-	if (validation(l))
-		ft_printf("valid\n");
+	print_rooms(&l);
+	// if (validation(l))
 		// find_path(l);
 	return (0);
 }
 
-int		validation(t_lemin *l)
-{
-	int check;
+//int		validation(t_lemin *l)
+//{
+//	int check;
+//
+//	check = 0;
+//	if (l.rooms->name == NULL)
+//	{
+//		ft_printf("no rooms!\n");
+//		this_is_error();
+//		return(0);
+//	}
+//	if (l->start == 0)
+//	{
+//		ft_printf("no start!\n");
+//		this_is_error();
+//		return(0);
+//	}
+//	if (l->end == 0)
+//	{
+//		ft_printf("no end!\n");
+//		this_is_error();
+//		return(0);
+//	}
+//	return (1);
+//}
 
-	check = 0;
-	if (l->rooms->name == NULL)
-	{
-		ft_printf("no rooms!\n");
-		this_is_error();
-		return(1);
-	}
-	if (l->start == 0)
-	{
-		ft_printf("no start!\n");
-		this_is_error();
-		return(1);
-	}
-	if (l->end == 0)
-	{
-		ft_printf("no end!\n");
-		this_is_error();
-		return(1);
-	}
-	return (0);
-}
 
-t_lemin	ft_init_structure(t_lemin *l)
-{
-	l->start = malloc(sizeof(char *));
-	l->end = malloc(sizeof(char *));
-	l->line = malloc(sizeof(char *));
-	l->rooms = (t_rooms *)malloc(sizeof(t_rooms));
-	l->rooms->next = NULL;
-	l->comment = 0;
-	return (*l);
-}
+
 
 void	get_ants(t_lemin *l)
 {
@@ -105,6 +99,7 @@ void	ft_create_rooms(t_rooms **rooms)
 
 	new = malloc(sizeof(t_rooms));
 	new->name = NULL;
+    new->connections = NULL;
 	new->next = *rooms;
 	*rooms = new;
 }
@@ -118,12 +113,11 @@ void	find_start_or_end(t_lemin *l)
 	j = 0;
 	if (ft_strcmp(l->line, "##start") == 0)
 	{
-		get_next_line(0, &l->line);
-		if (ft_strlen(l->start) != 0)
+		get_next_line(l->fd, &l->line);
+		if (l->start)
 			this_is_error();
 		else
 		{
-			ft_printf("line after start: %s\n", l->line);
 			if (ft_strchr(l->line, '#') || ft_strchr(l->line, '-'))
 			{
 				l->start = 0;
@@ -131,6 +125,7 @@ void	find_start_or_end(t_lemin *l)
 			}
 			else
 			{
+                l->start = ft_strnew(ft_strchr(l->line, ' ') - l->line);
 				while (l->line[i] && l->line[i] != ' ')
 					l->start[j++] = l->line[i++];
 			}
@@ -139,12 +134,11 @@ void	find_start_or_end(t_lemin *l)
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
 	{
-		get_next_line(0, &l->line);
-		if (ft_strlen(l->end) != 0)
+		get_next_line(l->fd, &l->line);
+		if (l->end)
 			this_is_error();
 		else
 		{
-			ft_printf("line after end: %s\n", l->line);
 			if ((ft_strchr(l->line, '#') || ft_strchr(l->line, '-')))
 			{
 				l->end = 0;
@@ -152,7 +146,8 @@ void	find_start_or_end(t_lemin *l)
 			}
 			else
 			{
-				while (l->line[i] && l->line[i] != ' ')
+                l->end = ft_strnew(ft_strchr(l->line, ' ') - l->line);
+                while (l->line[i] && l->line[i] != ' ')
 					l->end[j++] = l->line[i++];
 			}
 		}
@@ -210,17 +205,26 @@ void	get_rooms(t_lemin *l)
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
-		// ft_printf("line: %s, i : %d\n", l->line, i);
 		int len = ft_strchr(l->line, ' ') - l->line;
 		l->rooms->name = ft_strnew(len);
 
 		ft_strncpy(l->rooms->name, l->line, len);
-		ft_printf("room name: %s\n", l->rooms->name);
+		ft_printf("%s ", l->rooms->name);
 		check_str(l);
 		l->rooms->x = ft_atoi(ft_strchr(l->line + 1, ' '));
-		ft_printf("room x: %d\n", l->rooms->x);
+		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
+		{
+			ft_printf("not integer!!!!\n");
+			this_is_error();
+		}
+		ft_printf("%d ", l->rooms->x);
 		l->rooms->y = ft_atoi(ft_strchr(l->line + len + 2, ' '));
-		ft_printf("room y: %d\n", l->rooms->y);
+		if (l->rooms->y < 0 || l->rooms->y > 2147483647)
+		{
+			ft_printf("not integer!!!!\n");
+			this_is_error();
+		}
+		ft_printf("%d\n", l->rooms->y);
 	}
 }
 
@@ -229,36 +233,87 @@ void	ft_create_links(t_links **links)
 	t_links *new;
 
 	new = malloc(sizeof(t_links));
-	new->name1 = 0;
-	new->name2 = 0;
+	new->name1 = malloc(sizeof(t_links));
+	new->name2 = malloc(sizeof(t_links));
 	new->next = *links;
 	*links = new;
+}
+
+t_rooms *find_room(t_lemin *l, char *name)
+{
+	t_rooms *copy;
+
+	copy = l->rooms;
+	while (copy)
+	{
+		if (ft_strcmp(copy->name, name) == 0)
+		{
+			return (copy);
+			break ;
+		}
+		else
+			copy = copy->next;
+	}
+	return (copy);
+}
+
+void	connect_rooms(t_rooms *from, t_rooms *to)
+{
+	t_conn *confrom;
+	t_conn *conto;
+
+	confrom = ft_memalloc(sizeof(t_conn));
+	conto = ft_memalloc(sizeof(t_conn));
+	confrom->room = from;
+	conto->room = to;
+	confrom->next = to->connections;
+	to->connections = confrom;
+	conto->next = from->connections;
+	from->connections = conto;
+}
+
+void	print_rooms(t_lemin *l)
+{
+	t_rooms *copy;
+	t_conn *conn_iter;
+
+	copy = l->rooms;
+	while(copy)
+	{
+		ft_printf("room name: %s [", copy->name);
+		conn_iter = copy->connections;
+		while (conn_iter)
+		{
+			ft_printf("%s ", conn_iter->room->name);
+			conn_iter = conn_iter->next;
+		}
+		ft_printf("]\n");
+		copy = copy->next;
+	}
 }
 
 void	get_links(t_lemin *l)
 {
 	int		i;
+	int		j;
 
 	i = 0;
+	j = 0;
 	if (l->line)
 	{
 		ft_create_links(&l->links);
-		l->links->name1 = ft_atoi(l->line);
-		if (l->links->name1 < 0 || l->links->name1 > 2147483647)
-		{
-			ft_printf("not integer!!!!\n");
-			this_is_error();
-		}
-		ft_printf("name1: %d", l->links->name1);
-		ft_printf("-");
 		while (l->line[i] != '-')
-			i++;
-		l->links->name2 = ft_atoi(&l->line[i]);
-		if (l->links->name2 < 0 || l->links->name2 > 2147483647)
-		{
-			ft_printf("not integer!!!!\n");
-			this_is_error();
-		}
-		ft_printf("%d\n", l->links->name2);
+			l->links->name1[j++] = l->line[i++];
+		j = 0;
+		i = i + 1;
+		while (l->line[i] != '\0')
+			l->links->name2[j++] = l->line[i++];
+		ft_printf("%s-%s\n", l->links->name1, l->links->name2);
+		t_rooms *room1 = find_room(l, l->links->name1);
+		t_rooms *room2 = find_room(l, l->links->name2);
+		if (room1 && room2)
+			connect_rooms(room1, room2);
+		else
+			ft_printf("Something wrong\n");
 	}
 }
