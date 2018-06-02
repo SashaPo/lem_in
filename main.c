@@ -49,9 +49,12 @@ int		main(int ac, char **av)
 			get_rooms(&l);
 	}
 //	print_content(&l);
-//	print_rooms(&l);
+	print_rooms(&l);
 	 if (validation(&l))
-		 find_path(&l);
+	 {
+		 calculate_dist(&l);
+
+	 }
 	return (0);
 }
 

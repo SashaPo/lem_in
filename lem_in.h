@@ -23,12 +23,15 @@
 # define ERR_ANTSTRINGTOOLONG "[!] Error: ant number is too long"
 # define ERR_BIGANT "[!] Error: ant number is too big"
 
+struct s_conn;
+
 typedef struct		s_rooms
 {
 	char			*name;
-	int	            ant;
+	int	            dist;
 	int				x;
 	int				y;
+	t_bool			visited;
 	struct s_conn	*connections;
 	struct s_rooms	*next;
 }					t_rooms;
@@ -67,7 +70,7 @@ void				get_rooms(t_lemin *l);
 void				get_links(t_lemin *l);
 void				get_comments(t_lemin *l);
 int					validation(t_lemin *l);
-void				find_path(t_lemin *l);
+t_conn				*find_path(t_lemin *l);
 void				ft_create_links(t_links **links);
 void				ft_create_rooms(t_rooms **rooms);
 void				find_start_or_end(t_lemin *l);
@@ -79,6 +82,7 @@ void				print_content(t_lemin *l);
 void	            this_is_error(void);
 t_rooms 			*find_room(t_lemin *l, char *name);
 void				connect_rooms(t_rooms *from, t_rooms *to);
+void				calculate_dist(t_lemin *l);
 
 
 
