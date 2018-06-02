@@ -31,11 +31,8 @@ int		check_str(t_lemin *l)
 
 void	get_rooms(t_lemin *l)
 {
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
+	l->is_end = FALSE;
+	l->is_start = FALSE;
 	if (ft_strcmp(l->line, "##start") == 0 || ft_strcmp(l->line, "##end") == 0)
 		find_start_or_end(l);
 	if (check_spaces(l))
@@ -43,6 +40,10 @@ void	get_rooms(t_lemin *l)
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
+		if (l->is_end)
+			l->end = l->rooms;
+		if (l->is_start)
+			l->start = l->rooms;
 		int len = ft_strchr(l->line, ' ') - l->line;
 		l->rooms->name = ft_strnew(len);
 

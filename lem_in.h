@@ -16,6 +16,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+#include <ft_printf/ft_printf.h>
 # include "libft.h"
 
 # define ERR_BADLINKNAME "[!] Error: bad link name"
@@ -50,8 +51,10 @@ typedef struct		s_lemin
     int             fd;
     int	            ants;
 	int				comment;
-	char			*start;
-	char			*end;
+	t_rooms			*start;
+	t_rooms			*end;
+	t_bool			is_end;
+	t_bool			is_start;
 	char			*line;
 	t_rooms			*rooms;
 	t_links			*links;

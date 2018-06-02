@@ -55,29 +55,6 @@ int		main(int ac, char **av)
 	return (0);
 }
 
-int		validation(t_lemin *l)
-{
-	if (l->rooms->name == NULL)
-	{
-		ft_printf("no rooms!\n");
-		this_is_error();
-		return(0);
-	}
-	if (l->start == 0)
-	{
-		ft_printf("no start!\n");
-		this_is_error();
-		return(0);
-	}
-	if (l->end == 0)
-	{
-		ft_printf("no end!\n");
-		this_is_error();
-		return(0);
-	}
-	return (1);
-}
-
 void	get_ants(t_lemin *l)
 {
 	int i;
@@ -100,13 +77,9 @@ void	get_ants(t_lemin *l)
 
 void	find_start_or_end(t_lemin *l)
 {
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
 	if (ft_strcmp(l->line, "##start") == 0)
 	{
+		l->is_start = TRUE;
 		get_next_line(l->fd, &l->line);
 		store_line(l->line);
 		if (l->start)
@@ -118,17 +91,11 @@ void	find_start_or_end(t_lemin *l)
 				l->start = 0;
 				validation(l);
 			}
-			else
-			{
-                l->start = ft_strnew(ft_strchr(l->line, ' ') - l->line);
-				while (l->line[i] && l->line[i] != ' ')
-					l->start[j++] = l->line[i++];
-			}
 		}
-//		ft_printf("start: %s\n", l->start);
 	}
 	if (ft_strcmp(l->line, "##end") == 0)
 	{
+		l->is_end = TRUE;
 		get_next_line(l->fd, &l->line);
 		store_line(l->line);
 		if (l->end)
@@ -140,14 +107,7 @@ void	find_start_or_end(t_lemin *l)
 				l->end = 0;
 				validation(l);
 			}
-			else
-			{
-                l->end = ft_strnew(ft_strchr(l->line, ' ') - l->line);
-                while (l->line[i] && l->line[i] != ' ')
-					l->end[j++] = l->line[i++];
-			}
 		}
-//		ft_printf("end: %s\n", l->end);
 	}
 }
 

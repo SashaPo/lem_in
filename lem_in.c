@@ -14,5 +14,9 @@
 
 void	find_path(t_lemin *l)
 {
-	(void)l;
+	t_conn *queue;
+
+	queue = ft_memalloc(sizeof(t_conn));
+	queue->room = l->start;
+	ft_printf("%s\n", queue->room->name);
 }
