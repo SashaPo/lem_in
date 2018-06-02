@@ -5,8 +5,9 @@ void	ft_create_rooms(t_rooms **rooms)
 	t_rooms *new;
 
 	new = malloc(sizeof(t_rooms));
-	new->name = NULL;
-	new->connections = NULL;
+	ft_bzero(new, sizeof(t_rooms));
+//	new->name = NULL;
+//	new->connections = NULL;
 	new->next = *rooms;
 	*rooms = new;
 }

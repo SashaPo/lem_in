@@ -53,7 +53,8 @@ int		main(int ac, char **av)
 	 if (validation(&l))
 	 {
 		 calculate_dist(&l);
-
+		 t_conn *path = find_path(&l);
+		 print_connections(path);
 	 }
 	return (0);
 }

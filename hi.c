@@ -27,7 +27,7 @@ void	print_connections(t_conn *begin_con)
         ft_printf("%s ", begin_con->room->name);
         begin_con = begin_con->next;
     }
-    ft_printf("]\n");
+    ft_printf("\n");
 }
 
 void    ft_panic(char *massage)

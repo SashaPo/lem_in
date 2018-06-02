@@ -27,6 +27,19 @@ void	pushback(t_rooms *room, t_conn **list)
 	}
 }
 
+void	pushfront(t_rooms *room, t_conn **list)
+{
+	t_conn	*node = ft_memalloc(sizeof(t_conn));
+	node->room = room;
+	if (!*list)
+		*list = node;
+	else
+	{
+		node->next = *list;
+		*list = node;
+	}
+}
+
 void	calculate_dist(t_lemin *l)
 {
 	t_conn *queue;
@@ -45,10 +58,14 @@ void	calculate_dist(t_lemin *l)
 			{
 				ft_printf("wtf\n");
 				pushback(tmp->room, &queue);
+				tmp->room->visited = TRUE;
 				tmp->room->dist = queue->room->dist + 1;
 			}
 			if (tmp->room == l->end)
+			{
+				tmp->room->dist = queue->room->dist + 1;
 				return ;
+			}
 			tmp = tmp->next;
 		}
 		queue = queue->next; // DANGER: LEAKS AHEAD
@@ -57,5 +74,27 @@ void	calculate_dist(t_lemin *l)
 
 t_conn	*find_path(t_lemin *l)
 {
+	t_conn	*path;
+	t_rooms *temp;
+	t_conn *i;
 
+	path = NULL;
+	pushfront(l->end, &path);
+	temp = l->end;
+	while (1)
+	{
+		if (temp == l->start)
+			break ;
+		i = temp->connections;
+		while (i)
+		{
+			if (i->room->dist < temp->dist)
+			{
+				pushfront(i->room, &path);
+				temp = i->room;
+			}
+			i = i->next;
+		}
+	}
+	return (path);
 }
