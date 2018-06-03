@@ -1,19 +1,34 @@
 
 #include "lem_in.h"
 
+t_bool	is_numeric(const char *str)
+{
+	int	i;
+	t_bool	spaces;
+
+	i = 0;
+	spaces = TRUE;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ' && spaces)
+			continue ;
+		else
+			spaces = FALSE;
+		if (str[i] < 48 || str[i] > 57)
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
+}
+
 void	get_ants(t_lemin *l)
 {
-	int i;
-
 	while (get_next_line(l->fd, &l->line) && store_line(l->line))
 	{
-		i = 0;
-		while (l->line[i] != '\0')
-		{
-			if (l->line[i] < 48 || l->line[i] > 57)
-				this_is_error();
-			i++;
-		}
+		if (l->line && ft_strlen(l->line) && l->line[0] == '#')
+			continue ;
+		if (!is_numeric(l->line))
+			ft_panic("Ant number is not a valid number");
 		if (ft_strlen(l->line) > 10)
 			ft_panic(ERR_ANTSTRINGTOOLONG);
 		if (ft_atol(l->line) > 2147483647)

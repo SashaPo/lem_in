@@ -12,6 +12,17 @@ void	ft_create_rooms(t_rooms **rooms)
 	*rooms = new;
 }
 
+t_rooms	*create_room(char *name, long long x, long long y)
+{
+	t_rooms *room;
+
+	room = ft_memalloc(sizeof(t_rooms));
+	room->name = name;
+	room->x = x;
+	room->y = y;
+	return (room);
+}
+
 int		check_str(t_lemin *l)
 {
 	int		i;
@@ -59,6 +70,8 @@ void	add_room(t_lemin *l, char *name)
 		}
 		l->rooms->name = name;
 		size_t len = ft_strlen(name);
+		if (!is_numeric(l->line + len + 1))
+			ft_panic("bad coords\n");
 		l->rooms->x = ft_atol(ft_strchr(l->line + len + 1, ' '));
 		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
 			ft_panic("not integer!!!!\n");
@@ -67,6 +80,35 @@ void	add_room(t_lemin *l, char *name)
 			ft_panic("not integer!!!!\n");
 	}
 }
+
+//t_rooms	*cut_line(char *str, char sep, t_rooms *room)
+//{
+//	size_t	i;
+//	size_t	word_begin;
+//	t_rooms	*new_room;
+//	char *tk[3];
+//
+//	i = 0;
+//	while (i < ft_strlen(str) && str[i] != sep)
+//		i++;
+//	if (!i)
+//		ft_panic("Empty name");
+//	tk[0] = ft_strnew(i);
+//	ft_strncpy(tk[0], str, i++);
+//	word_begin = i;
+//	while (i < ft_strlen(str) && str[i] != sep)
+//		i++;
+//	tk[1] = ft_strnew(i - word_begin);
+//	ft_strncpy(tk[1], str + word_begin, i - word_begin);
+//	if (++i < ft_strlen(str))
+//		tk[2] = ft_strdup(&(str[i]));
+//	if (!is_numeric(tk[1]) || !is_numeric(tk[2]))
+//		ft_panic("Bad coords");
+//	new_room = create_room(tk[0], ft_atol(tk[1]), ft_atol(tk[2]));
+//	ft_strdel(&tk[1]);
+//	ft_strdel(&tk[2]);
+//	return (new_room);
+//}
 
 void	get_rooms(t_lemin *l)
 {
@@ -82,6 +124,7 @@ void	get_rooms(t_lemin *l)
 			continue ;
 		else
 		{
+//			cut_line(l->line, ' ', l->rooms);
 			char *roomname = NULL;
 			if ((roomname = ft_substr(l->line, ' ')) && !ft_strchr(roomname, '-'))
 				add_room(l, roomname);

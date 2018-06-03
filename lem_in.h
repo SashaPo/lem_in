@@ -109,6 +109,7 @@ void				ants_iter(t_ants *ants);
 t_path				*find_paths(t_lemin *l);
 int					store_line(char *line);
 char				*ft_substr(char *str, char sep);
+t_bool				is_numeric(const char *str);
 
 
 
