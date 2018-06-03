@@ -21,26 +21,69 @@ void	get_ants(t_lemin *l)
 		this_is_error();
 }
 
+void	add_ant(t_ants **ants, int id, t_conn *path)
+{
+	t_ants *ant = ft_memalloc(sizeof(t_ants));
+	ant->id = id;
+	ant->path = path;
+	t_ants *copy = *ants;
+	if (!*ants)
+		*ants = ant;
+	else
+	{
+		while (copy->next)
+			copy = copy->next;
+		copy->next = ant;
+	}
+}
+
+t_bool	move_ants(t_ants *ants)
+{
+	t_bool	moved;
+
+	moved = FALSE;
+	while (ants)
+	{
+		if (ants->path != NULL)
+		{
+			moved = TRUE;
+			ants->path = ants->path->next;
+			if (ants->path && ants->path->room)
+				ft_printf("L%d-%s ", ants->id, ants->path->room->name);
+		}
+		ants = ants->next;
+	}
+	if (moved)
+		ft_printf("\n");
+	return (moved);
+}
+
+void	ants_iter(t_ants *ants)
+{
+	t_bool	moved;
+
+	moved = TRUE;
+	while (moved)
+		moved = move_ants(ants);
+}
+
 t_ants	*ant_farm(t_path *all_paths, t_lemin *l)
 {
 	int 	i;
 	t_ants	*ants;
+	t_path	*tmp;
 
 	ants = NULL;
 	i = 1;
 	while (i <= l->ants)
 	{
-		t_ants *ant = ft_memalloc(sizeof(t_ants));
-		ant->id = i++;
-		t_ants *copy = ants;
-		if (!ants)
-			ants = ant;
-		else
+		tmp = all_paths;
+		while (tmp && i <= l->ants)
 		{
-			while (copy->next)
-				copy = copy->next;
-			copy->next = ant;
+			add_ant(&ants, i++, tmp->path);
+			tmp = tmp->next;
 		}
+		move_ants(ants);
 	}
-
+	return (ants);
 }

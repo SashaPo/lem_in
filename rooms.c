@@ -49,7 +49,6 @@ void	get_rooms(t_lemin *l)
 		l->rooms->name = ft_strnew(len);
 
 		ft_strncpy(l->rooms->name, l->line, len);
-		check_str(l);
 		l->rooms->x = ft_atol(ft_strchr(l->line + 1, ' '));
 		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
 		{

@@ -23,6 +23,8 @@
 # define ERR_ANTSTRINGTOOLONG "[!] Error: ant number is too long"
 # define ERR_BIGANT "[!] Error: ant number is too big"
 # define NOPATH "[!] Error: no path!"
+# define START "##start"
+# define END "##end"
 
 struct s_conn;
 
@@ -101,6 +103,8 @@ t_bool				bfs(t_lemin *l);
 void				reset_graph(t_rooms *rooms);
 void				remove_if(t_conn **begin, t_rooms *del);
 void				remove_path(t_lemin *l, t_conn *path);
+t_ants				*ant_farm(t_path *all_paths, t_lemin *l);
+void				ants_iter(t_ants *ants);
 
 
 

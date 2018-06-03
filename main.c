@@ -39,10 +39,10 @@ t_path *find_paths(t_lemin *l)
 		paths = new;
 		reset_graph(l->rooms);
 		remove_path(l, path);
-		print_rooms(l);
 	}
 	if (!paths)
 		ft_panic(NOPATH);
+	return (paths);
 }
 
 int		main(int ac, char **av)
@@ -69,10 +69,10 @@ int		main(int ac, char **av)
 			get_rooms(&l);
 	}
 //	print_content(&l);
-	print_rooms(&l);
 	validation(&l);
 	t_path *all_paths = find_paths(&l);
 	t_ants *ants = ant_farm(all_paths, &l);
+	ants_iter(ants);
 	return (0);
 }
 
