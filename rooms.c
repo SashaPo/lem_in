@@ -70,7 +70,7 @@ void	add_room(t_lemin *l, char *name)
 
 void	get_rooms(t_lemin *l)
 {
-	while (l->line && get_next_line(l->fd, &l->line) > 0 && store_line(l->line))
+	while (get_next_line(l->fd, &l->line) > 0 && store_line(l->line))
 	{
 		if (ft_strlen(l->line) == 0)
 			exit(1);
@@ -78,7 +78,7 @@ void	get_rooms(t_lemin *l)
 			l->is_start = TRUE;
 		else if (ft_strequ(l->line, END))
 			l->is_end = TRUE;
-		else if (l->line[0] == '#' && l->line[1] != '#')
+		else if (ft_strlen(l->line) && l->line[0] == '#' && l->line[1] != '#')
 			continue ;
 		else
 		{
@@ -86,7 +86,7 @@ void	get_rooms(t_lemin *l)
 			if ((roomname = ft_substr(l->line, ' ')) && !ft_strchr(roomname, '-'))
 				add_room(l, roomname);
 			else
-				break ;
+				return ft_strdel(&roomname);
 		}
 	}
 }

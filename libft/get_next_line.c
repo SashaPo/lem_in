@@ -50,7 +50,7 @@ int					ft_reader(t_gnl *buff, char **line, char *buf)
 		if (r >= 0 && buff->data && ft_strlen(buff->data))
 		{
 			*line = ft_strdup(buff->data);
-			buff->data = NULL;
+			ft_strdel(&buff->data);
 			return (1);
 		}
 		else

@@ -40,7 +40,19 @@ void	pushfront(t_rooms *room, t_conn **list)
 	}
 }
 
-t_bool		bfs(t_lemin *l)
+void	clear_path(t_conn **path)
+{
+	t_conn *cur = *path;
+	t_conn *prev;
+	while (cur)
+	{
+		prev = cur;
+		cur = cur->next;
+		ft_memdel((void **) &prev);
+	}
+}
+
+t_conn	*bfs(t_lemin *l)
 {
 	t_conn *queue;
 
@@ -61,7 +73,8 @@ t_bool		bfs(t_lemin *l)
 			if (tmp->room == l->end)
 			{
 				tmp->room->prev = queue->room;
-				return (TRUE);
+				clear_path(&queue);
+				return (tmp);
 			}
 			tmp = tmp->next;
 		}
@@ -69,7 +82,7 @@ t_bool		bfs(t_lemin *l)
 		queue = queue->next; // DANGER: LEAKS AHEAD
 		ft_memdel((void **) &tmp);
 	}
-	return (FALSE);
+	return (queue);
 }
 
 t_conn	*find_path(t_lemin *l)
@@ -93,8 +106,10 @@ t_path *find_paths(t_lemin *l)
 {
 	t_path *paths;
 	paths = NULL;
-	while (bfs(l))
+	t_conn *end;
+	while ((end = bfs(l)))
 	{
+		system("leaks lem_in");
 		t_conn *path = find_path(l);
 		t_path *new = ft_memalloc(sizeof(t_path));
 		new->path = path;

@@ -54,7 +54,6 @@ void	add_link(t_lemin *l)
 		ft_create_links(&l->links);
 		l->links->name1 = ft_substr(l->line, '-');
 		l->links->name2 = ft_substr(ft_strchr(l->line, '-') + 1, '\0');
-//		ft_printf("%s-%s\n", l->links->name1, l->links->name2);
 		t_rooms *room1 = find_room(l, l->links->name1);
 		t_rooms *room2 = find_room(l, l->links->name2);
 		if (room1 && room2)
@@ -74,7 +73,7 @@ void	get_links(t_lemin *l)
 	t_bool	first;
 
 	first = TRUE;
-	while (first || get_next_line(l->fd, &l->line) && store_line(l->line))
+	while (first || (get_next_line(l->fd, &l->line) && store_line(l->line)))
 	{
 		first = FALSE;
 		if (l->line && l->line[0] == '#')
