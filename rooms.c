@@ -83,7 +83,7 @@ void	get_rooms(t_lemin *l)
 		else
 		{
 			char *roomname = NULL;
-			if (!(roomname = ft_substr(l->line, ' ')))
+			if ((roomname = ft_substr(l->line, ' ')) && !ft_strchr(roomname, '-'))
 				add_room(l, roomname);
 			else
 				break ;

@@ -71,8 +71,12 @@ void	add_link(t_lemin *l)
 
 void	get_links(t_lemin *l)
 {
-	while (get_next_line(l->fd, &l->line) && store_line(l->line))
+	t_bool	first;
+
+	first = TRUE;
+	while (first || get_next_line(l->fd, &l->line) && store_line(l->line))
 	{
+		first = FALSE;
 		if (l->line && l->line[0] == '#')
 			continue ;
 		if (!ft_strchr(l->line, '-'))

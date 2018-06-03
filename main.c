@@ -21,9 +21,9 @@ int		main(int ac, char **av)
 	l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
 	get_ants(&l);
 	get_rooms(&l);
+	system("leaks lem_in");
 	validation(&l);
 	get_links(&l);
-	system("leaks lem_in");
 	t_path *all_paths = find_paths(&l);
 	t_ants *ants = ant_farm(all_paths, &l);
 	ants_iter(ants);
