@@ -34,11 +34,39 @@ void	reset_graph(t_rooms *rooms)
 	}
 }
 
-void	remove_path(t_conn *path)
+void	removeif(t_conn **begin, t_rooms *del)
+{
+	if ((*begin)->room == del)
+		*begin = (*begin)->next;
+	t_conn *cur = *begin;
+	t_conn *prev = *begin;
+	while (cur)
+	{
+		if (cur->room == del)
+		{
+			prev->next = cur->next;
+			break;
+		}
+		prev = cur;
+		cur = cur->next;
+	}
+}
+
+void	remove_conn(t_rooms *curr, t_rooms *prev)
+{
+	if (!prev || !curr)
+		return ;
+	removeif(&curr->connections, prev);
+	removeif(&prev->connections, curr);
+}
+
+void	remove_path(t_lemin *l, t_conn *path)
 {
 	while (path)
 	{
-		path->room->visited = TRUE;
+		if (path->room != l->start && path->room != l->end)
+			path->room->visited = TRUE;
+		remove_conn(path->room, path->room->prev);
 		path = path->next;
 	}
 }
@@ -68,17 +96,23 @@ int		main(int ac, char **av)
 	}
 //	print_content(&l);
 	print_rooms(&l);
-	 if (validation(&l))
-	 {
-		 bfs(&l);
-		 t_conn *path = find_path(&l);
-		 print_connections(path);
-		 reset_graph(l.rooms);
-		 remove_path(path);
-		 bfs(&l);
-		t_conn *path2 = find_path(&l);
-		 print_connections(path2);
-	 }
+	validation(&l);
+	t_path *paths;
+	paths = NULL;
+	while (bfs(&l))
+	{
+		t_conn *path = find_path(&l);
+//		print_connections(path);
+		t_path *new = ft_memalloc(sizeof(t_path));
+		new->path = path;
+		new->next = paths;
+		paths = new;
+		reset_graph(l.rooms);
+		remove_path(&l, path);
+		print_rooms(&l);
+	}
+	if (!paths)
+		ft_panic(NOPATH);
 	return (0);
 }
 

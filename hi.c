@@ -8,7 +8,7 @@ void	print_rooms(t_lemin *l)
     copy = l->rooms;
     while(copy)
     {
-        ft_printf("room name: %s [", copy->name);
+        ft_printf("room name: %s | visited: %d | [", copy->name, copy->visited);
         conn_iter = copy->connections;
         while (conn_iter)
         {

@@ -22,6 +22,7 @@
 # define ERR_BADLINKNAME "[!] Error: bad link name"
 # define ERR_ANTSTRINGTOOLONG "[!] Error: ant number is too long"
 # define ERR_BIGANT "[!] Error: ant number is too big"
+# define NOPATH "[!] Error: no path!"
 
 struct s_conn;
 
@@ -41,6 +42,13 @@ typedef struct		s_conn
 	t_rooms			*room;
 	struct 	s_conn	*next;
 }					t_conn;
+
+typedef struct		s_path
+{
+	int 			len;
+	struct 	s_conn	*path;
+	struct 	s_path	*next;
+}					t_path;
 
 typedef struct		s_links
 {
@@ -82,7 +90,7 @@ void				print_content(t_lemin *l);
 void	            this_is_error(void);
 t_rooms 			*find_room(t_lemin *l, char *name);
 void				connect_rooms(t_rooms *from, t_rooms *to);
-void				bfs(t_lemin *l);
+t_bool				bfs(t_lemin *l);
 
 
 

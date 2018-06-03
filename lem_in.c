@@ -40,7 +40,7 @@ void	pushfront(t_rooms *room, t_conn **list)
 	}
 }
 
-void	bfs(t_lemin *l)
+t_bool		bfs(t_lemin *l)
 {
 	t_conn *queue;
 
@@ -61,12 +61,13 @@ void	bfs(t_lemin *l)
 			if (tmp->room == l->end)
 			{
 				tmp->room->prev = queue->room;
-				return ;
+				return (TRUE);
 			}
 			tmp = tmp->next;
 		}
 		queue = queue->next; // DANGER: LEAKS AHEAD
 	}
+	return (FALSE);
 }
 
 t_conn	*find_path(t_lemin *l)
