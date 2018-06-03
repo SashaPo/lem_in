@@ -106,6 +106,8 @@ void				remove_if(t_conn **begin, t_rooms *del);
 void				remove_path(t_lemin *l, t_conn *path);
 t_ants				*ant_farm(t_path *all_paths, t_lemin *l);
 void				ants_iter(t_ants *ants);
+t_path				*find_paths(t_lemin *l);
+int					store_line(char *line);
 
 
 

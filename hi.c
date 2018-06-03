@@ -2,54 +2,65 @@
 
 void	print_rooms(t_lemin *l)
 {
-    t_rooms *copy;
-    t_conn *conn_iter;
+	t_rooms *copy;
+	t_conn *conn_iter;
 
-    copy = l->rooms;
-    while(copy)
-    {
-        ft_printf("room name: %s | visited: %d | [", copy->name, copy->visited);
-        conn_iter = copy->connections;
-        while (conn_iter)
-        {
-            ft_printf("%s ", conn_iter->room->name);
-            conn_iter = conn_iter->next;
-        }
-        ft_printf("]\n");
-        copy = copy->next;
-    }
+	copy = l->rooms;
+	while(copy)
+	{
+		ft_printf("room name: %s | visited: %d | [", copy->name, copy->visited);
+		conn_iter = copy->connections;
+		while (conn_iter)
+		{
+			ft_printf("%s ", conn_iter->room->name);
+			conn_iter = conn_iter->next;
+		}
+		ft_printf("]\n");
+		copy = copy->next;
+	}
 }
 
 void	print_connections(t_conn *begin_con)
 {
-    while (begin_con)
-    {
-        ft_printf("%s ", begin_con->room->name);
-        begin_con = begin_con->next;
-    }
-    ft_printf("\n");
+	while (begin_con)
+	{
+		ft_printf("%s ", begin_con->room->name);
+		begin_con = begin_con->next;
+	}
+	ft_printf("\n");
 }
 
 void    ft_panic(char *massage)
 {
-    ft_putstr_fd(massage, 2);
-    exit(1);
+	ft_putstr_fd(massage, 2);
+	exit(1);
 }
 
 void	this_is_error(void)
 {
-    write(1, "ERROR\n", 6);
-    exit(1);
+	write(1, "ERROR\n", 6);
+	exit(1);
 }
 
 void	print_content(t_lemin *l)
 {
-    t_list *copy;
+	t_list *copy;
 
-    copy = l->content_list;
-    while (copy)
-    {
-        ft_printf("%s\n", copy->content);
-        copy = copy->next;
-    }
+	copy = l->content_list;
+	while (copy)
+	{
+		ft_printf("%s\n", copy->content);
+		copy = copy->next;
+	}
+}
+
+int     store_line(char *line)
+{
+	static t_lemin *l = NULL;
+
+	if (!l)
+		l = (t_lemin *)line;
+	else
+		ft_lstpush_b(&l->content_list, ft_lstnew(line, ft_strlen(line) + 1));
+	return (1);
 }

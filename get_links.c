@@ -47,13 +47,8 @@ char	*ft_substr(char *str, char sep)
 	return (res);
 }
 
-void	get_links(t_lemin *l)
+void	add_link(t_lemin *l)
 {
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
 	if (l->line)
 	{
 		ft_create_links(&l->links);
@@ -74,3 +69,8 @@ void	get_links(t_lemin *l)
 	}
 }
 
+void	get_links(t_lemin *l)
+{
+	if (ft_strchr(l->line, '-'))
+		add_link(l);
+}

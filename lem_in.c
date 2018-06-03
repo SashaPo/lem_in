@@ -88,3 +88,22 @@ t_conn	*find_path(t_lemin *l)
 	}
 	return (path);
 }
+
+t_path *find_paths(t_lemin *l)
+{
+	t_path *paths;
+	paths = NULL;
+	while (bfs(l))
+	{
+		t_conn *path = find_path(l);
+		t_path *new = ft_memalloc(sizeof(t_path));
+		new->path = path;
+		new->next = paths;
+		paths = new;
+		reset_graph(l->rooms);
+		remove_path(l, path);
+	}
+	if (!paths)
+		ft_panic(NOPATH);
+	return (paths);
+}
