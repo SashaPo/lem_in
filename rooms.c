@@ -49,22 +49,19 @@ void	get_rooms(t_lemin *l)
 		l->rooms->name = ft_strnew(len);
 
 		ft_strncpy(l->rooms->name, l->line, len);
-//		ft_printf("%s ", l->rooms->name);
 		check_str(l);
-		l->rooms->x = ft_atoi(ft_strchr(l->line + 1, ' '));
+		l->rooms->x = ft_atol(ft_strchr(l->line + 1, ' '));
 		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
 		{
 			ft_printf("not integer!!!!\n");
 			this_is_error();
 		}
-//		ft_printf("%d ", l->rooms->x);
-		l->rooms->y = ft_atoi(ft_strchr(l->line + len + 2, ' '));
+		l->rooms->y = ft_atol(ft_strchr(l->line + len + 2, ' '));
 		if (l->rooms->y < 0 || l->rooms->y > 2147483647)
 		{
 			ft_printf("not integer!!!!\n");
 			this_is_error();
 		}
-//		ft_printf("%d\n", l->rooms->y);
 	}
 }
 

@@ -30,8 +30,8 @@ typedef struct		s_rooms
 {
 	char			*name;
 	struct s_rooms	*prev;
-	int				x;
-	int				y;
+	long				x;
+	long				y;
 	t_bool			visited;
 	struct s_conn	*connections;
 	struct s_rooms	*next;
@@ -49,6 +49,13 @@ typedef struct		s_path
 	struct 	s_conn	*path;
 	struct 	s_path	*next;
 }					t_path;
+
+typedef struct		s_ants
+{
+	struct 	s_conn 	*path;
+	int				ant;
+	struct 	s_ants	*next;
+}					t_ants;
 
 typedef struct		s_links
 {
