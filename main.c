@@ -25,6 +25,24 @@ int     store_line(char *line)
     return (1);
 }
 
+void	reset_graph(t_rooms *rooms)
+{
+	while (rooms)
+	{
+		rooms->visited = FALSE;
+		rooms = rooms->next;
+	}
+}
+
+void	remove_path(t_conn *path)
+{
+	while (path)
+	{
+		path->room->visited = TRUE;
+		path = path->next;
+	}
+}
+
 int		main(int ac, char **av)
 {
 	static t_lemin	l;
@@ -52,9 +70,14 @@ int		main(int ac, char **av)
 	print_rooms(&l);
 	 if (validation(&l))
 	 {
-		 calculate_dist(&l);
+		 bfs(&l);
 		 t_conn *path = find_path(&l);
 		 print_connections(path);
+		 reset_graph(l.rooms);
+		 remove_path(path);
+		 bfs(&l);
+		t_conn *path2 = find_path(&l);
+		 print_connections(path2);
 	 }
 	return (0);
 }

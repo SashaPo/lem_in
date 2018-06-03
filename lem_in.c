@@ -40,14 +40,12 @@ void	pushfront(t_rooms *room, t_conn **list)
 	}
 }
 
-void	calculate_dist(t_lemin *l)
+void	bfs(t_lemin *l)
 {
 	t_conn *queue;
 
 	queue = ft_memalloc(sizeof(t_conn));
 	queue->room = l->start;
-	ft_printf("%s\n", queue->room->name);
-	t_conn *queue_begin = queue;
 	while (queue)
 	{
 		queue->room->visited = TRUE;
@@ -56,14 +54,13 @@ void	calculate_dist(t_lemin *l)
 		{
 			if (tmp->room->visited != TRUE)
 			{
-				ft_printf("wtf\n");
 				pushback(tmp->room, &queue);
 				tmp->room->visited = TRUE;
-				tmp->room->dist = queue->room->dist + 1;
+				tmp->room->prev = queue->room;
 			}
 			if (tmp->room == l->end)
 			{
-				tmp->room->dist = queue->room->dist + 1;
+				tmp->room->prev = queue->room;
 				return ;
 			}
 			tmp = tmp->next;
@@ -76,25 +73,15 @@ t_conn	*find_path(t_lemin *l)
 {
 	t_conn	*path;
 	t_rooms *temp;
-	t_conn *i;
 
 	path = NULL;
-	pushfront(l->end, &path);
 	temp = l->end;
 	while (1)
 	{
+		pushfront(temp, &path);
 		if (temp == l->start)
 			break ;
-		i = temp->connections;
-		while (i)
-		{
-			if (i->room->dist < temp->dist)
-			{
-				pushfront(i->room, &path);
-				temp = i->room;
-			}
-			i = i->next;
-		}
+		temp = temp->prev;
 	}
 	return (path);
 }

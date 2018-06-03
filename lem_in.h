@@ -28,7 +28,7 @@ struct s_conn;
 typedef struct		s_rooms
 {
 	char			*name;
-	int	            dist;
+	struct s_rooms	*prev;
 	int				x;
 	int				y;
 	t_bool			visited;
@@ -82,7 +82,7 @@ void				print_content(t_lemin *l);
 void	            this_is_error(void);
 t_rooms 			*find_room(t_lemin *l, char *name);
 void				connect_rooms(t_rooms *from, t_rooms *to);
-void				calculate_dist(t_lemin *l);
+void				bfs(t_lemin *l);
 
 
 
