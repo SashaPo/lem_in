@@ -24,7 +24,9 @@ int		main(int ac, char **av)
 	validation(&l);
 	get_links(&l);
 	t_path *all_paths = find_paths(&l);
-//	t_ants *ants = ant_farm(all_paths, &l);
-//	ants_iter(ants);
+	print_content(&l);
+	t_ants *ants = ant_farm(all_paths, &l);
+	ants_iter(ants);
+	system("leaks lem_in");
 	return (0);
 }

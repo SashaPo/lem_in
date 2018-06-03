@@ -109,13 +109,15 @@ t_path *find_paths(t_lemin *l)
 	t_conn *end;
 	while ((end = bfs(l)))
 	{
-		system("leaks lem_in");
 		t_conn *path = find_path(l);
+
 		t_path *new = ft_memalloc(sizeof(t_path));
 		new->path = path;
 		new->next = paths;
+
 		paths = new;
 		reset_graph(l->rooms);
+
 		remove_path(l, path);
 	}
 	if (!paths)
