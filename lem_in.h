@@ -91,6 +91,9 @@ void	            this_is_error(void);
 t_rooms 			*find_room(t_lemin *l, char *name);
 void				connect_rooms(t_rooms *from, t_rooms *to);
 t_bool				bfs(t_lemin *l);
+void				reset_graph(t_rooms *rooms);
+void				remove_if(t_conn **begin, t_rooms *del);
+void				remove_path(t_lemin *l, t_conn *path);
 
 
 
