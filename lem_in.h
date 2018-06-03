@@ -53,7 +53,7 @@ typedef struct		s_path
 typedef struct		s_ants
 {
 	struct 	s_conn 	*path;
-	int				ant;
+	int				id;
 	struct 	s_ants	*next;
 }					t_ants;
 

@@ -72,7 +72,7 @@ int		main(int ac, char **av)
 	print_rooms(&l);
 	validation(&l);
 	t_path *all_paths = find_paths(&l);
-	t_ants *ants = ant_farm(all_paths);
+	t_ants *ants = ant_farm(all_paths, &l);
 	return (0);
 }
 
