@@ -32,35 +32,40 @@ int		check_str(t_lemin *l)
 
 void	get_rooms(t_lemin *l)
 {
-	l->is_end = FALSE;
-	l->is_start = FALSE;
-	if (ft_strcmp(l->line, "##start") == 0 || ft_strcmp(l->line, "##end") == 0)
-		find_start_or_end(l);
 	if (check_spaces(l))
 		l->line = NULL;
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
 		if (l->is_end)
-			l->end = l->rooms;
+		{
+			if (l->end)
+				ft_panic("TWO ENDS");
+			else
+			{
+				l->end = l->rooms;
+				l->is_end = FALSE;
+			}
+		}
 		if (l->is_start)
-			l->start = l->rooms;
+		{
+			if (l->start)
+				ft_panic("TWO STARTS");
+			else
+			{
+				l->start = l->rooms;
+				l->is_start = FALSE;
+			}
+		}
 		int len = ft_strchr(l->line, ' ') - l->line;
 		l->rooms->name = ft_strnew(len);
-
 		ft_strncpy(l->rooms->name, l->line, len);
 		l->rooms->x = ft_atol(ft_strchr(l->line + 1, ' '));
 		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
-		{
-			ft_printf("not integer!!!!\n");
-			this_is_error();
-		}
+			ft_panic("not integer!!!!\n");
 		l->rooms->y = ft_atol(ft_strchr(l->line + len + 2, ' '));
 		if (l->rooms->y < 0 || l->rooms->y > 2147483647)
-		{
-			ft_printf("not integer!!!!\n");
-			this_is_error();
-		}
+			ft_panic("not integer!!!!\n");
 	}
 }
 
@@ -74,7 +79,6 @@ t_rooms *find_room(t_lemin *l, char *name)
 		if (ft_strcmp(copy->name, name) == 0)
 		{
 			return (copy);
-			break ;
 		}
 		else
 			copy = copy->next;

@@ -48,26 +48,30 @@ t_path *find_paths(t_lemin *l)
 int		main(int ac, char **av)
 {
 	static t_lemin	l;
-	int comments;
 
     store_line((char *)&l);
     l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
-	comments = 0;
 	if (!(get_next_line(l.fd, &l.line)))
 		this_is_error();
 	get_ants(&l);
-//	ft_printf("%d\n", l.ants);
 	while (l.line && get_next_line(l.fd, &l.line) > 0 && store_line(l.line))
 	{
 		if (ft_strlen(l.line) == 0)
 			exit(1);
 		if (ft_strchr(l.line, '-'))
 			get_links(&l);
+		else if (ft_strequ(l.line, START))
+			l.is_start = TRUE;
+		else if (ft_strequ(l.line, END))
+			l.is_end = TRUE;
 		else if (l.line[0] == '#' && l.line[1] != '#')
-			comments++;
+			continue ;
 		else
 			get_rooms(&l);
 	}
+	ft_strdel(&l.line);
+	system("leaks lem_in");
+
 //	print_content(&l);
 	validation(&l);
 	t_path *all_paths = find_paths(&l);
@@ -78,7 +82,17 @@ int		main(int ac, char **av)
 
 void	find_start_or_end(t_lemin *l)
 {
-	if (ft_strcmp(l->line, "##start") == 0)
+	t_bool	is_start;
+
+	is_start = (t_bool)ft_strequ(l->line, START);
+	if (is_start)
+		l->is_start = TRUE;
+	else
+		l->is_end = TRUE;
+	while (get_next_line(l->fd, &l->line) > 0 && store_line(l->line) &&
+			ft_strlen(l->line) > 0 && l->line[0] == '#')
+
+	if (ft_strcmp(l->line, START) == 0)
 	{
 		l->is_start = TRUE;
 		get_next_line(l->fd, &l->line);
@@ -94,7 +108,7 @@ void	find_start_or_end(t_lemin *l)
 			}
 		}
 	}
-	if (ft_strcmp(l->line, "##end") == 0)
+	if (ft_strcmp(l->line, END) == 0)
 	{
 		l->is_end = TRUE;
 		get_next_line(l->fd, &l->line);

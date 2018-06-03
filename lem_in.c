@@ -65,7 +65,9 @@ t_bool		bfs(t_lemin *l)
 			}
 			tmp = tmp->next;
 		}
+		tmp = queue;
 		queue = queue->next; // DANGER: LEAKS AHEAD
+		ft_memdel((void **) &tmp);
 	}
 	return (FALSE);
 }

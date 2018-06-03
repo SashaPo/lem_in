@@ -97,6 +97,8 @@ int					get_next_line(const int fd, char **line)
 	res = 0;
 	if (fd < 0 || !line)
 		return (-1);
+	if (*line)
+		ft_strdel(line);
 	content = ft_fd(&buff, fd);
 	res = ft_line(content, line);
 	if (res == 1)
