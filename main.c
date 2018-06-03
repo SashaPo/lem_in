@@ -19,10 +19,9 @@ int		main(int ac, char **av)
 
 	store_line((char *)&l);
 	l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
-	if (!(get_next_line(l.fd, &l.line)))
-		this_is_error();
 	get_ants(&l);
 	get_rooms(&l);
+	validation(&l);
 	get_links(&l);
 	system("leaks lem_in");
 	t_path *all_paths = find_paths(&l);

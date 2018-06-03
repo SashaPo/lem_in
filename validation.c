@@ -14,23 +14,11 @@
 
 int		validation(t_lemin *l)
 {
-	if (l->rooms->name == NULL)
-	{
-		ft_printf("no rooms!\n");
-		this_is_error();
-		return(0);
-	}
-	if (l->start == 0)
-	{
-		ft_printf("no start!\n");
-		this_is_error();
-		return(0);
-	}
-	if (l->end == 0)
-	{
-		ft_printf("no end!\n");
-		this_is_error();
-		return(0);
-	}
+	if (l->rooms == NULL)
+		ft_panic("no rooms!\n");
+	else if (l->start == NULL)
+		ft_panic("no start!\n");
+	else if (l->end == NULL)
+		ft_panic("no end!\n");
 	return (1);
 }

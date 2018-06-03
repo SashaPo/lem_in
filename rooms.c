@@ -30,7 +30,7 @@ int		check_str(t_lemin *l)
 	return (0);
 }
 
-void	add_room(t_lemin *l)
+void	add_room(t_lemin *l, char *name)
 {
 	if (check_spaces(l))
 		l->line = NULL;
@@ -57,10 +57,9 @@ void	add_room(t_lemin *l)
 				l->is_start = FALSE;
 			}
 		}
-		int len = ft_strchr(l->line, ' ') - l->line;
-		l->rooms->name = ft_strnew(len);
-		ft_strncpy(l->rooms->name, l->line, len);
-		l->rooms->x = ft_atol(ft_strchr(l->line + 1, ' '));
+		l->rooms->name = name;
+		size_t len = ft_strlen(name);
+		l->rooms->x = ft_atol(ft_strchr(l->line + len + 1, ' '));
 		if (l->rooms->x < 0 || l->rooms->x > 2147483647)
 			ft_panic("not integer!!!!\n");
 		l->rooms->y = ft_atol(ft_strchr(l->line + len + 2, ' '));
@@ -82,7 +81,13 @@ void	get_rooms(t_lemin *l)
 		else if (l->line[0] == '#' && l->line[1] != '#')
 			continue ;
 		else
-			add_room(l);
+		{
+			char *roomname = NULL;
+			if (!(roomname = ft_substr(l->line, ' ')))
+				add_room(l, roomname);
+			else
+				break ;
+		}
 	}
 }
 

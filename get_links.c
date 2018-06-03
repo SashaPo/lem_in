@@ -71,6 +71,12 @@ void	add_link(t_lemin *l)
 
 void	get_links(t_lemin *l)
 {
-	if (ft_strchr(l->line, '-'))
+	while (get_next_line(l->fd, &l->line) && store_line(l->line))
+	{
+		if (l->line && l->line[0] == '#')
+			continue ;
+		if (!ft_strchr(l->line, '-'))
+			ft_panic(ERR_BADLINKNAME);
 		add_link(l);
+	}
 }
