@@ -12,74 +12,42 @@
 
 #include "lem_in.h"
 
-void	ft_create_rooms(t_rooms **rooms)
+void	ft_check_flags(t_lemin *l)
 {
-	t_rooms *new;
-
-	new = malloc(sizeof(t_rooms));
-	ft_bzero(new, sizeof(t_rooms));
-	new->next = *rooms;
-	*rooms = new;
-}
-
-t_rooms	*create_room(char *name, long long x, long long y)
-{
-	t_rooms *room;
-
-	room = ft_memalloc(sizeof(t_rooms));
-	room->name = name;
-	room->x = x;
-	room->y = y;
-	return (room);
-}
-
-int		check_str(t_lemin *l)
-{
-	int		i;
-	int		n;
-
-	i = 0;
-	n = 65;
-	while (n < 122)
+	if (l->is_end)
 	{
-		if (ft_strchr(l->line + 1, n++))
+		if (l->end)
+			ft_panic("TWO ENDS");
+		else
 		{
-			ft_printf("not a valid line!!!!\n");
-			this_is_error();
+			l->end = l->rooms;
+			l->is_end = FALSE;
 		}
 	}
-	return (0);
+	if (l->is_start)
+	{
+		if (l->start)
+			ft_panic("TWO STARTS");
+		else
+		{
+			l->start = l->rooms;
+			l->is_start = FALSE;
+		}
+	}
 }
 
 void	add_room(t_lemin *l, char *name)
 {
+	size_t len;
+
 	if (check_spaces(l))
 		ft_panic("bad coords\n");
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
-		if (l->is_end)
-		{
-			if (l->end)
-				ft_panic("TWO ENDS");
-			else
-			{
-				l->end = l->rooms;
-				l->is_end = FALSE;
-			}
-		}
-		if (l->is_start)
-		{
-			if (l->start)
-				ft_panic("TWO STARTS");
-			else
-			{
-				l->start = l->rooms;
-				l->is_start = FALSE;
-			}
-		}
+		ft_check_flags(l);
 		l->rooms->name = name;
-		size_t len = ft_strlen(name);
+		len = ft_strlen(name);
 		if (!is_numeric(l->line + len + 1))
 			ft_panic("bad coords\n");
 		l->rooms->x = ft_atol(ft_strchr(l->line + len + 1, ' '));
@@ -93,6 +61,8 @@ void	add_room(t_lemin *l, char *name)
 
 void	get_rooms(t_lemin *l)
 {
+	char *roomname;
+
 	while (get_next_line(l->fd, &l->line) > 0 && store_line(l->line))
 	{
 		if (ft_strlen(l->line) == 0)
@@ -105,17 +75,16 @@ void	get_rooms(t_lemin *l)
 			continue ;
 		else
 		{
-//			cut_line(l->line, ' ', l->rooms);
-			char *roomname = NULL;
-			if ((roomname = ft_substr(l->line, ' ')) && !ft_strchr(roomname, '-'))
+			if ((roomname = ft_substr(l->line, ' ')) &&
+					!ft_strchr(l->line, '-'))
 				add_room(l, roomname);
 			else
-				return ft_strdel(&roomname);
+				return (ft_strdel(&roomname));
 		}
 	}
 }
 
-t_rooms *find_room(t_lemin *l, char *name)
+t_rooms	*find_room(t_lemin *l, char *name)
 {
 	t_rooms *copy;
 
@@ -146,4 +115,3 @@ void	connect_rooms(t_rooms *from, t_rooms *to)
 	conto->next = from->connections;
 	from->connections = conto;
 }
-

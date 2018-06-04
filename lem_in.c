@@ -12,64 +12,44 @@
 
 #include "lem_in.h"
 
-void	pushback(t_rooms *room, t_conn **list)
-{
-	t_conn	*node = ft_memalloc(sizeof(t_conn));
-	node->room = room;
-	if (!*list)
-		*list = node;
-	else
-	{
-		t_conn *copy = *list;
-		while (copy->next != NULL)
-			copy = copy->next;
-		copy->next = node;
-	}
-}
-
-void	pushfront(t_rooms *room, t_conn **list)
-{
-	t_conn	*node = ft_memalloc(sizeof(t_conn));
-	node->room = room;
-	if (!*list)
-		*list = node;
-	else
-	{
-		node->next = *list;
-		*list = node;
-	}
-}
-
 void	clear_path(t_conn **path)
 {
-	t_conn *cur = *path;
-	t_conn *prev;
+	t_conn	*cur;
+	t_conn	*prev;
+
+	cur = *path;
 	while (cur)
 	{
 		prev = cur;
 		cur = cur->next;
-		ft_memdel((void **) &prev);
+		ft_memdel((void **)&prev);
+	}
+}
+
+void	go_to(t_conn *tmp, t_conn *queue)
+{
+	if (tmp->room->visited != TRUE)
+	{
+		pushback(tmp->room, &queue);
+		tmp->room->visited = TRUE;
+		tmp->room->prev = queue->room;
 	}
 }
 
 t_conn	*bfs(t_lemin *l)
 {
-	t_conn *queue;
+	t_conn	*queue;
+	t_conn	*tmp;
 
 	queue = ft_memalloc(sizeof(t_conn));
 	queue->room = l->start;
 	while (queue)
 	{
 		queue->room->visited = TRUE;
-		t_conn *tmp = queue->room->connections;
+		tmp = queue->room->connections;
 		while (tmp)
 		{
-			if (tmp->room->visited != TRUE)
-			{
-				pushback(tmp->room, &queue);
-				tmp->room->visited = TRUE;
-				tmp->room->prev = queue->room;
-			}
+			go_to(tmp, queue);
 			if (tmp->room == l->end)
 			{
 				tmp->room->prev = queue->room;
@@ -79,8 +59,8 @@ t_conn	*bfs(t_lemin *l)
 			tmp = tmp->next;
 		}
 		tmp = queue;
-		queue = queue->next; // DANGER: LEAKS AHEAD
-		ft_memdel((void **) &tmp);
+		queue = queue->next;
+		ft_memdel((void **)&tmp);
 	}
 	return (queue);
 }
@@ -88,7 +68,7 @@ t_conn	*bfs(t_lemin *l)
 t_conn	*find_path(t_lemin *l)
 {
 	t_conn	*path;
-	t_rooms *temp;
+	t_rooms	*temp;
 
 	path = NULL;
 	temp = l->end;
@@ -102,22 +82,22 @@ t_conn	*find_path(t_lemin *l)
 	return (path);
 }
 
-t_path *find_paths(t_lemin *l)
+t_path	*find_paths(t_lemin *l)
 {
-	t_path *paths;
+	t_path	*paths;
+	t_conn	*path;
+	t_path	*new;
+	t_conn	*end;
+
 	paths = NULL;
-	t_conn *end;
 	while ((end = bfs(l)))
 	{
-		t_conn *path = find_path(l);
-
-		t_path *new = ft_memalloc(sizeof(t_path));
+		path = find_path(l);
+		new = ft_memalloc(sizeof(t_path));
 		new->path = path;
 		new->next = paths;
-
 		paths = new;
 		reset_graph(l->rooms);
-
 		remove_path(l, path);
 	}
 	if (!paths)

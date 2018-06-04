@@ -1,25 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_ants.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: opokusyn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/04 14:37:21 by opokusyn          #+#    #+#             */
+/*   Updated: 2018/06/04 14:37:25 by opokusyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "lem_in.h"
-
-t_bool	is_numeric(const char *str)
-{
-	int	i;
-	t_bool	spaces;
-
-	i = 0;
-	spaces = TRUE;
-	while (str[i] != '\0')
-	{
-		if (str[i] == ' ')
-			i++;
-		else
-			spaces = FALSE;
-		if (str[i] < 48 || str[i] > 57)
-			return (FALSE);
-		i++;
-	}
-	return (TRUE);
-}
 
 void	get_ants(t_lemin *l)
 {
@@ -35,19 +26,21 @@ void	get_ants(t_lemin *l)
 			ft_panic(ERR_BIGANT);
 		l->ants = (int)ft_atol(l->line);
 		if (l->ants <= 0)
-			this_is_error();
+			ft_panic("no ants!!!!");
 		else
 			break ;
 	}
-
 }
 
 void	add_ant(t_ants **ants, int id, t_conn *path)
 {
-	t_ants *ant = ft_memalloc(sizeof(t_ants));
+	t_ants	*ant;
+	t_ants	*copy;
+
+	ant = ft_memalloc(sizeof(t_ants));
 	ant->id = id;
 	ant->path = path;
-	t_ants *copy = *ants;
+	copy = *ants;
 	if (!*ants)
 		*ants = ant;
 	else
@@ -90,7 +83,7 @@ void	ants_iter(t_ants *ants)
 
 t_ants	*ant_farm(t_path *all_paths, t_lemin *l)
 {
-	int 	i;
+	int		i;
 	t_ants	*ants;
 	t_path	*tmp;
 

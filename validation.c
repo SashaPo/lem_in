@@ -22,3 +22,29 @@ int		validation(t_lemin *l)
 		ft_panic("no end!\n");
 	return (1);
 }
+
+t_bool	is_numeric(const char *str)
+{
+	int		i;
+	t_bool	spaces;
+
+	i = 0;
+	spaces = TRUE;
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ')
+			i++;
+		else
+			spaces = FALSE;
+		if (str[i] < 48 || str[i] > 57)
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
+}
+
+void	ft_panic(char *massage)
+{
+	ft_putstr_fd(massage, 2);
+	exit(1);
+}

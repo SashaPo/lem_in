@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_links.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: opokusyn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/04 14:01:24 by opokusyn          #+#    #+#             */
+/*   Updated: 2018/06/04 14:01:31 by opokusyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "lem_in.h"
 
@@ -8,15 +19,15 @@ int		check_spaces(t_lemin *l)
 
 	i = 0;
 	spaces = 0;
-	while(l->line[i])
+	while (l->line[i])
 	{
 		if (l->line[i] == ' ' && l->line[i + 1] != ' ')
 			spaces++;
 		i++;
 	}
 	if (spaces != 2)
-		return(1);
-	return(0);
+		return (1);
+	return (0);
 }
 
 void	ft_create_links(t_links **links)
@@ -41,24 +52,29 @@ char	*ft_substr(char *str, char sep)
 		i++;
 	if (i > 0)
 	{
-		res = ft_strnew((size_t) (i));
-		ft_strncpy(res, str, (size_t) (i));
+		res = ft_strnew((size_t)(i));
+		ft_strncpy(res, str, (size_t)(i));
 	}
 	return (res);
 }
 
 void	add_link(t_lemin *l)
 {
+	t_rooms *room1;
+	t_rooms *room2;
+	char	*tmp;
+
 	if (l->line)
 	{
 		ft_create_links(&l->links);
 		l->links->name1 = ft_substr(l->line, '-');
-		if (!ft_substr(ft_strchr(l->line, '-') + 1, '\0'))
+		if (!(tmp = ft_substr(ft_strchr(l->line, '-') + 1, '\0')))
 			ft_panic(ERR_BADLINKNAME);
 		else
 			l->links->name2 = ft_substr(ft_strchr(l->line, '-') + 1, '\0');
-		t_rooms *room1 = find_room(l, l->links->name1);
-		t_rooms *room2 = find_room(l, l->links->name2);
+		ft_strdel(&tmp);
+		room1 = find_room(l, l->links->name1);
+		room2 = find_room(l, l->links->name2);
 		if (room1 && room2)
 		{
 			if (room1 == room2)

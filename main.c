@@ -16,6 +16,8 @@
 int		main(int ac, char **av)
 {
 	static t_lemin	l;
+	t_path			*all_paths;
+	t_ants			*ants;
 
 	store_line((char *)&l);
 	l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
@@ -23,9 +25,9 @@ int		main(int ac, char **av)
 	get_rooms(&l);
 	validation(&l);
 	get_links(&l);
-	t_path *all_paths = find_paths(&l);
+	all_paths = find_paths(&l);
 	print_content(&l);
-	t_ants *ants = ant_farm(all_paths, &l);
+	ants = ant_farm(all_paths, &l);
 	ants_iter(ants);
 	system("leaks lem_in");
 	return (0);
