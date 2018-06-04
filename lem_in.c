@@ -87,13 +87,13 @@ t_path	*find_paths(t_lemin *l)
 	t_path	*paths;
 	t_conn	*path;
 	t_path	*new;
-	t_conn	*end;
 
 	paths = NULL;
-	while ((end = bfs(l)))
+	while ((bfs(l)))
 	{
 		path = find_path(l);
 		new = ft_memalloc(sizeof(t_path));
+		new->len = path_len(path);
 		new->path = path;
 		new->next = paths;
 		paths = new;

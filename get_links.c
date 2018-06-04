@@ -64,27 +64,25 @@ void	add_link(t_lemin *l)
 	t_rooms *room2;
 	char	*tmp;
 
-	if (l->line)
+	if (!l->line || ft_strlen(l->line) == 0)
+		return ;
+	ft_create_links(&l->links);
+	l->links->name1 = ft_substr(l->line, '-');
+	if (!(tmp = ft_substr(ft_strchr(l->line, '-') + 1, '\0')))
+		ft_panic(ERR_BADLINKNAME);
+	else
+		l->links->name2 = ft_substr(ft_strchr(l->line, '-') + 1, '\0');
+	ft_strdel(&tmp);
+	room1 = find_room(l, l->links->name1);
+	room2 = find_room(l, l->links->name2);
+	if (room1 && room2)
 	{
-		ft_create_links(&l->links);
-		l->links->name1 = ft_substr(l->line, '-');
-		if (!(tmp = ft_substr(ft_strchr(l->line, '-') + 1, '\0')))
-			ft_panic(ERR_BADLINKNAME);
-		else
-			l->links->name2 = ft_substr(ft_strchr(l->line, '-') + 1, '\0');
-		ft_strdel(&tmp);
-		room1 = find_room(l, l->links->name1);
-		room2 = find_room(l, l->links->name2);
-		if (room1 && room2)
-		{
-			if (room1 == room2)
-				ft_panic(ERR_LINK_DUPLICATE);
-			else
-				connect_rooms(room1, room2);
-		}
-		else
-			ft_panic(ERR_NOSUCH_ROOM);
+		if (room1 == room2)
+			ft_panic(ERR_LINK_DUPLICATE);
+		connect_rooms(room1, room2);
 	}
+	else
+		ft_panic(ERR_NOSUCH_ROOM);
 }
 
 void	get_links(t_lemin *l)
@@ -97,6 +95,8 @@ void	get_links(t_lemin *l)
 		first = FALSE;
 		if (l->line && l->line[0] == '#')
 			continue ;
+		else if (ft_strlen(l->line) == 0)
+			break ;
 		if (!ft_strchr(l->line, '-') || ft_strlen(l->line) < 3)
 			ft_panic(ERR_BADLINKNAME);
 		add_link(l);

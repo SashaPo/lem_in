@@ -34,7 +34,7 @@ FILES = ft_memcmp.c 		ft_strlcat.c		ft_atoi.c \
 		ft_lstmap.c			ft_lstpush_b.c		ft_lstclear.c \
 		ft_lst_size.c		ft_swap.c			ft_del.c \
 		get_next_line.c     ft_itoa_base.c 		ft_itoa_base_2.c    \
-		ft_itoa_long.c  ft_itoa_base_long_2.c ft_itoa_ulong.c
+		ft_itoa_long.c  ft_itoa_base_long_2.c ft_itoa_ulong.c   ft_atol.c
 
 PRINTF_SRCS = ft_printf.c ft_init.c ft_unicode.c ft_handle_c.c \
        ft_flag_parser.c ft_specifiers.c ft_bool.c \

@@ -22,6 +22,7 @@ void	print_content(t_lemin *l)
 		ft_printf("%s\n", copy->content);
 		copy = copy->next;
 	}
+	ft_printf("\n");
 }
 
 int		store_line(char *line)

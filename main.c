@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include "lem_in.h"
 
 int		main(int ac, char **av)
@@ -19,6 +18,7 @@ int		main(int ac, char **av)
 	t_path			*all_paths;
 	t_ants			*ants;
 
+	(void)ac;
 	store_line((char *)&l);
 	l.fd = av[1] ? open(av[1], O_RDONLY) : 0;
 	get_ants(&l);

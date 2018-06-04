@@ -19,17 +19,19 @@ void	get_ants(t_lemin *l)
 		if (l->line && ft_strlen(l->line) && l->line[0] == '#')
 			continue ;
 		if (!is_numeric(l->line))
-			ft_panic("Ant number is not a valid number");
+			ft_panic("[!] Error: ant number is not a valid number");
 		if (ft_strlen(l->line) > 10)
 			ft_panic(ERR_ANTSTRINGTOOLONG);
 		if (ft_atol(l->line) > 2147483647)
 			ft_panic(ERR_BIGANT);
 		l->ants = (int)ft_atol(l->line);
 		if (l->ants <= 0)
-			ft_panic("no ants!!!!");
+			ft_panic("[!] Error: no ants!!!!");
 		else
 			break ;
 	}
+	if (!l->ants)
+		ft_panic("No input");
 }
 
 void	add_ant(t_ants **ants, int id, t_conn *path)
@@ -91,11 +93,16 @@ t_ants	*ant_farm(t_path *all_paths, t_lemin *l)
 	i = 1;
 	while (i <= l->ants)
 	{
-		tmp = all_paths;
-		while (tmp && i <= l->ants)
+		if (l->ants - i <= all_paths->len)
+			add_ant(&ants, i++, all_paths->path);
+		else
 		{
-			add_ant(&ants, i++, tmp->path);
-			tmp = tmp->next;
+			tmp = all_paths;
+			while (tmp && i <= l->ants)
+			{
+				add_ant(&ants, i++, tmp->path);
+				tmp = tmp->next;
+			}
 		}
 		move_ants(ants);
 	}

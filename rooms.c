@@ -71,13 +71,14 @@ void	get_rooms(t_lemin *l)
 			l->is_start = TRUE;
 		else if (ft_strequ(l->line, END))
 			l->is_end = TRUE;
-		else if (ft_strlen(l->line) && l->line[0] == '#' && l->line[1] != '#')
+		else if (ft_strlen(l->line) && l->line[0] == '#')
 			continue ;
 		else
 		{
 			if ((roomname = ft_substr(l->line, ' ')) &&
 					!ft_strchr(l->line, '-'))
-				add_room(l, roomname);
+				room_check(roomname, l) ? add_room(l, roomname) :
+				ft_panic("room duplication!");
 			else
 				return (ft_strdel(&roomname));
 		}

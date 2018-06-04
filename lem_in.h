@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <ft_printf/ft_printf.h>
 # include "libft.h"
+# include <fcntl.h>
 
 # define ERR_BADLINKNAME "[!] Error: bad link name!"
 # define ERR_ANTSTRINGTOOLONG "[!] Error: ant number is too long!"
@@ -106,5 +107,7 @@ char				*ft_substr(char *str, char sep);
 t_bool				is_numeric(const char *str);
 void				pushback(t_rooms *room, t_conn **list);
 void				pushfront(t_rooms *room, t_conn **list);
+t_bool				room_check(char *roomname, t_lemin *l);
+int					path_len(t_conn *path);
 
 #endif
