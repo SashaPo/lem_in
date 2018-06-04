@@ -10,8 +10,8 @@ t_bool	is_numeric(const char *str)
 	spaces = TRUE;
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ' && spaces)
-			continue ;
+		if (str[i] == ' ')
+			i++;
 		else
 			spaces = FALSE;
 		if (str[i] < 48 || str[i] > 57)

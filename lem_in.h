@@ -24,6 +24,7 @@
 # define ERR_BIGANT "[!] Error: ant number is too big"
 # define NOPATH "[!] Error: no path!"
 # define ERR_LINK_DUPLICATE "[!] Error: duplicate names in link"
+# define ERR_NOSUCH_ROOM "[!] Error: no such room to link!"
 # define START "##start"
 # define END "##end"
 

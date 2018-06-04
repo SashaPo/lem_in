@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rooms.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: opokusyn <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/06/04 13:22:39 by opokusyn          #+#    #+#             */
+/*   Updated: 2018/06/04 13:22:43 by opokusyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "lem_in.h"
 
 void	ft_create_rooms(t_rooms **rooms)
@@ -6,8 +18,6 @@ void	ft_create_rooms(t_rooms **rooms)
 
 	new = malloc(sizeof(t_rooms));
 	ft_bzero(new, sizeof(t_rooms));
-//	new->name = NULL;
-//	new->connections = NULL;
 	new->next = *rooms;
 	*rooms = new;
 }
@@ -44,7 +54,7 @@ int		check_str(t_lemin *l)
 void	add_room(t_lemin *l, char *name)
 {
 	if (check_spaces(l))
-		l->line = NULL;
+		ft_panic("bad coords\n");
 	if (l->line)
 	{
 		ft_create_rooms(&l->rooms);
@@ -80,35 +90,6 @@ void	add_room(t_lemin *l, char *name)
 			ft_panic("not integer!!!!\n");
 	}
 }
-
-//t_rooms	*cut_line(char *str, char sep, t_rooms *room)
-//{
-//	size_t	i;
-//	size_t	word_begin;
-//	t_rooms	*new_room;
-//	char *tk[3];
-//
-//	i = 0;
-//	while (i < ft_strlen(str) && str[i] != sep)
-//		i++;
-//	if (!i)
-//		ft_panic("Empty name");
-//	tk[0] = ft_strnew(i);
-//	ft_strncpy(tk[0], str, i++);
-//	word_begin = i;
-//	while (i < ft_strlen(str) && str[i] != sep)
-//		i++;
-//	tk[1] = ft_strnew(i - word_begin);
-//	ft_strncpy(tk[1], str + word_begin, i - word_begin);
-//	if (++i < ft_strlen(str))
-//		tk[2] = ft_strdup(&(str[i]));
-//	if (!is_numeric(tk[1]) || !is_numeric(tk[2]))
-//		ft_panic("Bad coords");
-//	new_room = create_room(tk[0], ft_atol(tk[1]), ft_atol(tk[2]));
-//	ft_strdel(&tk[1]);
-//	ft_strdel(&tk[2]);
-//	return (new_room);
-//}
 
 void	get_rooms(t_lemin *l)
 {
